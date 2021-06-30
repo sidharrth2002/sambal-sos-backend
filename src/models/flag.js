@@ -4,6 +4,7 @@ const uuid = require('uuid/v4'); // ES5
 // const bcrypt = require('bcrypt')
 const logger = require('../../winston-config')
 
+// Flag
 module.exports = (sequelize, DataTypes) => {
   const Flag = sequelize.define('flag', {
     id: {
