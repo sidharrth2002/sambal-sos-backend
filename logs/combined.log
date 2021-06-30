@@ -14,3 +14,80 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:26:36.330Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-06-30T15:26:41.915Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-06-30T15:26:41.915Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:45:24.837Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:45:24.897Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-06-30T15:47:27.713Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-06-30T15:47:27.714Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:53:19.487Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:53:19.548Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-06-30T15:54:13.647Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-06-30T15:54:17.670Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:56:04.526Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:56:04.595Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:56:09.991Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:56:10.052Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:57:43.689Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:57:43.752Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:58:39.295Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:58:39.356Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:59:21.197Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:59:21.259Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:59:57.412Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:59:57.476Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:00:11.868Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:00:11.929Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:02:31.546Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:02:31.607Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:02:52.252Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:02:52.318Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:03:10.678Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:03:10.753Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:06:34.831Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:06:34.895Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:07:03.907Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:07:03.976Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:09:54.528Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:09:54.590Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-06-30T16:09:58.712Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-06-30T16:09:58.713Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:18:25.414Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:18:25.476Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:19:35.122Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:19:35.268Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:20:08.269Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:20:08.335Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:22:16.398Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:22:16.465Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-06-30T16:22:18.365Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-06-30T16:22:18.367Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:31:49.824Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:31:49.887Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:32:30.589Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:32:30.652Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:34:10.995Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:34:11.056Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:34:12.453Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:34:12.514Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:34:14.401Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:34:14.462Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:34:15.690Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:34:15.752Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:35:29.079Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:35:29.160Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:36:15.046Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:36:15.109Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-06-30T16:36:33.934Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:38:17.439Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:38:17.505Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:40:30.854Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:40:30.917Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:42:02.467Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:42:02.528Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:42:04.440Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:42:04.502Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:42:44.447Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:42:44.519Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T16:42:53.978Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T16:42:54.040Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-06-30T16:43:17.519Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-06-30T16:43:17.523Z"}

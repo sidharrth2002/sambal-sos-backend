@@ -18,15 +18,10 @@
                     "field": "title",
                     "seqType": "Sequelize.TEXT"
                 },
-                "latitude": {
+                "coordinates": {
                     "allowNull": false,
-                    "field": "latitude",
-                    "seqType": "Sequelize.DECIMAL(10, 6)"
-                },
-                "longitude": {
-                    "allowNull": false,
-                    "field": "longitude",
-                    "seqType": "Sequelize.DECIMAL(10, 6)"
+                    "field": "coordinates",
+                    "seqType": "Sequelize.GEOMETRY('POINT')"
                 },
                 "status": {
                     "allowNull": true,
@@ -111,5 +106,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 3
 }

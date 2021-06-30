@@ -1,9 +1,20 @@
 const logger = require('../../winston-config')
 const db = require('../models')
 
+module.exports.createTestUser = (req, res) => {
+  db.user.create({
+    email: `sid${Math.random()*1000}@sid.com`,
+    first_name: "sid",
+    last_name: "sid",
+    password: "sid"
+  })
+  .then(newUser => res.status(200).send(newUser))
+}
+
 module.exports.getAllUsers = (req, res) => {
   db.user.findAll({
-    attributes: { exclude: ['password'] }
+    attributes: { exclude: ['password'] },
+    include: db.flag
   })
     .then(users => {
       res.status(200).json({ status: true, data: users })

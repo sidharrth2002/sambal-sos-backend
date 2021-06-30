@@ -1,2 +1,5 @@
 {"message":"Unable to connect to the database:' connect ETIMEDOUT","level":"error","timestamp":"2021-06-30T15:00:57.233Z"}
 {"message":"Unable to connect to the database:' connect ETIMEDOUT","level":"error","timestamp":"2021-06-30T15:01:53.048Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-06-30T15:54:13.646Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-06-30T15:54:17.669Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-06-30T16:36:33.934Z"}
