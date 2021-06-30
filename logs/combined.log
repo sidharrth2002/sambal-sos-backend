@@ -8,3 +8,9 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:03:37.618Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-06-30T15:03:43.621Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-06-30T15:03:43.622Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:26:35.190Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:26:35.293Z"}
+{"message":"server started on port 3000","level":"info","timestamp":"2021-06-30T15:26:36.260Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-06-30T15:26:36.330Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-06-30T15:26:41.915Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-06-30T15:26:41.915Z"}

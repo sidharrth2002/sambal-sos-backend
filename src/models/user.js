@@ -29,6 +29,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   })
 
+  User.associate = models => {
+    User.hasMany(models.flag);
+  }
+
   /**
    * beforeCreate hook on User instance to hash the password
    */

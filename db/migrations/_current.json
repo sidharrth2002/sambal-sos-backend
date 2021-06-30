@@ -1,5 +1,67 @@
 {
     "tables": {
+        "flags": {
+            "tableName": "flags",
+            "schema": {
+                "id": {
+                    "defaultValue": {
+                        "internal": true,
+                        "value": "Sequelize.UUIDV4"
+                    },
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "field": "id",
+                    "seqType": "Sequelize.UUID"
+                },
+                "title": {
+                    "allowNull": true,
+                    "field": "title",
+                    "seqType": "Sequelize.TEXT"
+                },
+                "latitude": {
+                    "allowNull": false,
+                    "field": "latitude",
+                    "seqType": "Sequelize.DECIMAL(10, 6)"
+                },
+                "longitude": {
+                    "allowNull": false,
+                    "field": "longitude",
+                    "seqType": "Sequelize.DECIMAL(10, 6)"
+                },
+                "status": {
+                    "allowNull": true,
+                    "field": "status",
+                    "seqType": "Sequelize.ENUM('Pending', 'In Progress', 'Completed', 'False Report')"
+                },
+                "description": {
+                    "allowNull": true,
+                    "field": "description",
+                    "seqType": "Sequelize.TEXT"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "userId": {
+                    "allowNull": true,
+                    "references": {
+                        "model": "users",
+                        "key": "id"
+                    },
+                    "onDelete": "SET NULL",
+                    "onUpdate": "CASCADE",
+                    "field": "userId",
+                    "seqType": "Sequelize.INTEGER"
+                }
+            },
+            "indexes": []
+        },
         "users": {
             "tableName": "users",
             "schema": {
@@ -49,5 +111,5 @@
             "indexes": []
         }
     },
-    "revision": 1
+    "revision": 2
 }
