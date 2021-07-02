@@ -13,21 +13,17 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       primaryKey: true
     },
-    title: {
-        type: DataTypes.TEXT,
-        allowNull: true,
-    },
     coordinates: {
         type: DataTypes.GEOMETRY('POINT'),
         allowNull: false,
     },
-    status: {
-        type: DataTypes.ENUM(['Pending', 'In Progress', 'Completed', 'False Report']),
-        allowNull: true,
-    },
     description: {
         type: DataTypes.TEXT,
         allowNull: true,
+    },
+    image: {
+        type: DataTypes.TEXT,
+        allowNull: true
     }
   })
 

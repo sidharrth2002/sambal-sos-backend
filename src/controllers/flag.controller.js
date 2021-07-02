@@ -1,85 +1,103 @@
-const logger = require('../../winston-config')
-const db = require('../models')
-const _ = require("lodash")
+const logger = require("../../winston-config");
+const db = require("../models");
+const sequelize = require("sequelize");
 
-module.exports.getFlags = (req, res) => {
-    const { offset, limit } = req.body;
+// get paginated version of all flags
+// by default, will only send back 10
+module.exports.getAllFlags = (req, res) => {
+  const { offset, limit } = req.body;
 
-    db.flag.findAll({
-        limit: (!limit ? null : limit),
-        offset: (!offset ? null : offset),
-        include: [{model: db.user, attributes: ['id', 'first_name', 'last_name', 'email']}],
-    },)
-    .then(flags => {
-        res.status(200).json({
-            status: true,
-            data: flags
-        })
+  db.flag
+    .findAll({
+      limit: !limit ? 10 : limit,
+      offset: !offset ? null : offset
     })
-}
-
-module.exports.createTestFlag = (req, res) => {
-    let point = { type: 'Point', coordinates: [39.807222,-76.984722] };
-
-    db.flag.create({
-        title: "Testing",
-        coordinates: point,
-        status: "In Progress",
-        description: "Test Description",
-        userId: 9
-    })
-    .then(newFlag => res.status(200).send(newFlag))
-}
-
-module.exports.createFlag = (req, res) => {
-  const coordinates = {
-    type: "Point",
-    coordinates: [_.get(req.body, "latitude", 0), _.get(req.body, "longitude", 0)]
-  }
-
-  db.flag.create({
-    title: _.get(req.body, "title", null),
-    status: _.get(req.body, "status", "Pending"),
-    description: _.get(req.body, "description", null),
-    coordinates,
-    userId: _.get(req.body, "userId", 1)
-  })
-  .then(newFlag => res.status(200).send(newFlag))
-}
-
-module.exports.getAllUsers = (req, res) => {
-  db.user.findAll({
-    attributes: { exclude: ['password'] }
-  })
-    .then(users => {
-      res.status(200).json({ status: true, data: users })
+    .then((flags) => {
+      res.status(200).json({
+        status: true,
+        data: flags,
+      });
     })
     .catch(err => {
-      logger.error(`DB Error: ${err.message}`)
-      res.status(500).json({
-        status: false,
-        message: 'some error occured',
-        error: err
-      })
+      res.status(500).send(err);
     })
+};
+
+// get flags within a radius
+module.exports.getAllFlagsInRadius = async (req, res) => {
+  const { radius, latitude, longitude } = req.body;
+
+  const coordinates = sequelize.literal(
+    `ST_GeomFromText('POINT(${longitude} ${latitude})')`
+  );
+  const distance = sequelize.fn(
+    "ST_Distance_Sphere",
+    sequelize.col("coordinates"),
+    coordinates
+  );
+  db.flag
+    .findAll({
+      order: distance,
+      where: sequelize.where(distance, { $lte: radius }),
+      logging: console.log,
+    })
+    .then((inRadius) => {
+      res.status(200).send(inRadius)
+    })
+    .catch(err => {
+      res.status(500).send(err);
+    })
+};
+
+// create new flag
+module.exports.createFlag = (req, res) => {
+  // for now, send from frontend
+  // after this, take the ID from JWT
+  const { latitude, longitude, description, userId } = req.body;
+
+  const coordinates = {
+    type: "Point",
+    coordinates: [latitude, longitude],
+  };
+  db.flag
+    .create({
+      description: description,
+      coordinates,
+      userId: userId,
+    })
+    .then((newFlag) => res.status(201).send(newFlag))
+    .catch(err => {
+      res.status(500).send(err);
+    })
+};
+
+// delete a flag
+// only admins can delete
+module.exports.deleteFlag = (req, res) => {
+  const { id } = req.body;
+
+  db.flag.destroy({
+    where: {
+      id
+    }
+  })
+  .then((stat) => res.status(204).send(stat))
+  .catch(err => {
+    res.status(500).send(err);
+  })
 }
 
-
-
-// Refer Here
-// module.exports.getAllUsers = (req, res) => {
-//   db.user.findAll({
-//     attributes: { exclude: ['password'] }
-//   })
-//     .then(users => {
-//       res.status(200).json({ status: true, data: users })
+// Delete this soon
+// module.exports.createTestFlag = (req, res) => {
+//   let point = { type: "Point", coordinates: [39.807222, -76.984722] };
+//   db.flag
+//     .create({
+//       coordinates: point,
+//       description: "Test Description",
+//       userId: "",
 //     })
+//     .then((newFlag) => res.status(200).send(newFlag))
 //     .catch(err => {
-//       logger.error(`DB Error: ${err.message}`)
-//       res.status(500).json({
-//         status: false,
-//         message: 'some error occured',
-//         error: err
-//       })
+//       res.status(500).send(err);
 //     })
-// }
+// };

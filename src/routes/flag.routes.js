@@ -1,14 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const { validate } = require('../../utils/utils')
-const { createTestFlag, getFlags, createFlag } = require('../controllers/flag.controller')
+const { createFlag, getAllFlags, deleteFlag } = require('../controllers/flag.controller')
 
-router.post('/createtest', createTestFlag)
-
-router.get('/getall', getFlags)
+router.get('/getall', getAllFlags)
 
 router.post('/createflag', createFlag)
 
-// router.post('/delete-flag', validate, deleteFlag)
+router.post('/deleteflag', deleteFlag)
 
 module.exports = router

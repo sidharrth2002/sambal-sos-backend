@@ -3,10 +3,7 @@ const db = require('../models')
 
 module.exports.createTestUser = (req, res) => {
   db.user.create({
-    email: `sid${Math.random()*1000}@sid.com`,
-    first_name: "sid",
-    last_name: "sid",
-    password: "sid"
+    email: `sidharrth2002@gmail.com`,
   })
   .then(newUser => res.status(200).send(newUser))
 }

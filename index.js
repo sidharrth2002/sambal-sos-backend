@@ -7,6 +7,7 @@ const swaggerUI = require('swagger-ui-express')
 const { swaggerDocument, swaggerOptions } = require('./swagger.config')
 const db = require('./src/models')
 const routes = require('./src/routes')
+const cors = require('cors');
 
 // Modules
 const logger = require('./winston-config')
@@ -15,10 +16,12 @@ require('dotenv').config()
 
 let port = process.env.NODE_PORT
 if (isNaN(parseInt(port))) {
-  port = 3000
+  port = 5000
 }
 // create express app
 const app = express()
+
+app.use(cors());
 
 // Middlewares
 app.use(express.urlencoded({ extended: true }))

@@ -6,63 +6,107 @@ var Sequelize = require('sequelize');
  * Actions summary:
  *
  * createTable "users", deps: []
+ * createTable "flags", deps: [users]
  *
  **/
 
 var info = {
     "revision": 1,
     "name": "noname",
-    "created": "2021-06-30T15:05:00.855Z",
+    "created": "2021-07-02T15:28:04.179Z",
     "comment": ""
 };
 
 var migrationCommands = [{
-    fn: "createTable",
-    params: [
-        "users",
-        {
-            "id": {
-                "type": Sequelize.INTEGER,
-                "field": "id",
-                "autoIncrement": true,
-                "primaryKey": true,
-                "allowNull": false
+        fn: "createTable",
+        params: [
+            "users",
+            {
+                "id": {
+                    "type": Sequelize.UUID,
+                    "field": "id",
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "defaultValue": Sequelize.UUIDV4
+                },
+                "email": {
+                    "type": Sequelize.STRING(50),
+                    "field": "email",
+                    "unique": true,
+                    "allowNull": false
+                },
+                "createdAt": {
+                    "type": Sequelize.DATE,
+                    "field": "createdAt",
+                    "allowNull": false
+                },
+                "updatedAt": {
+                    "type": Sequelize.DATE,
+                    "field": "updatedAt",
+                    "allowNull": false
+                }
             },
-            "email": {
-                "type": Sequelize.STRING(50),
-                "field": "email",
-                "unique": true,
-                "allowNull": false
+            {}
+        ]
+    },
+    {
+        fn: "createTable",
+        params: [
+            "flags",
+            {
+                "id": {
+                    "type": Sequelize.UUID,
+                    "field": "id",
+                    "primaryKey": true,
+                    "allowNull": false,
+                    "defaultValue": Sequelize.UUIDV4
+                },
+                "title": {
+                    "type": Sequelize.TEXT,
+                    "field": "title",
+                    "allowNull": true
+                },
+                "coordinates": {
+                    "type": Sequelize.GEOMETRY('POINT'),
+                    "field": "coordinates",
+                    "allowNull": false
+                },
+                "status": {
+                    "type": Sequelize.ENUM('Pending', 'In Progress', 'Completed', 'False Report'),
+                    "field": "status",
+                    "allowNull": true
+                },
+                "description": {
+                    "type": Sequelize.TEXT,
+                    "field": "description",
+                    "allowNull": true
+                },
+                "createdAt": {
+                    "type": Sequelize.DATE,
+                    "field": "createdAt",
+                    "allowNull": false
+                },
+                "updatedAt": {
+                    "type": Sequelize.DATE,
+                    "field": "updatedAt",
+                    "allowNull": false
+                },
+                "userId": {
+                    "type": Sequelize.UUID,
+                    "field": "userId",
+                    "onUpdate": "CASCADE",
+                    "onDelete": "SET NULL",
+                    "references": {
+                        "model": "users",
+                        "key": "id"
+                    },
+                    "allowNull": true
+                }
             },
-            "first_name": {
-                "type": Sequelize.STRING(50),
-                "field": "first_name",
-                "defaultValue": ""
-            },
-            "last_name": {
-                "type": Sequelize.STRING(50),
-                "field": "last_name",
-                "defaultValue": ""
-            },
-            "password": {
-                "type": Sequelize.STRING,
-                "field": "password",
-                "allowNull": false
-            },
-            "createdAt": {
-                "type": Sequelize.DATE,
-                "field": "createdAt",
-                "allowNull": false
-            },
-            "updatedAt": {
-                "type": Sequelize.DATE,
-                "field": "updatedAt",
-                "allowNull": false
-            }
-        },
-        {}
-    ]
-}];
+            {}
+        ]
+    }
+];
 
 module.exports = {
     pos: 0,

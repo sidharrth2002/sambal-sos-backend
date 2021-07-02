@@ -18,15 +18,10 @@
                     "field": "title",
                     "seqType": "Sequelize.TEXT"
                 },
-                "latitude": {
+                "coordinates": {
                     "allowNull": false,
-                    "field": "latitude",
-                    "seqType": "Sequelize.DECIMAL(10, 6)"
-                },
-                "longitude": {
-                    "allowNull": false,
-                    "field": "longitude",
-                    "seqType": "Sequelize.DECIMAL(10, 6)"
+                    "field": "coordinates",
+                    "seqType": "Sequelize.GEOMETRY('POINT')"
                 },
                 "status": {
                     "allowNull": true,
@@ -57,7 +52,7 @@
                     "onDelete": "SET NULL",
                     "onUpdate": "CASCADE",
                     "field": "userId",
-                    "seqType": "Sequelize.INTEGER"
+                    "seqType": "Sequelize.UUID"
                 }
             },
             "indexes": []
@@ -66,36 +61,20 @@
             "tableName": "users",
             "schema": {
                 "id": {
+                    "defaultValue": {
+                        "internal": true,
+                        "value": "Sequelize.UUIDV4"
+                    },
                     "allowNull": false,
                     "primaryKey": true,
-                    "autoIncrement": true,
                     "field": "id",
-                    "seqType": "Sequelize.INTEGER"
+                    "seqType": "Sequelize.UUID"
                 },
                 "email": {
                     "allowNull": false,
                     "unique": true,
                     "field": "email",
                     "seqType": "Sequelize.STRING(50)"
-                },
-                "first_name": {
-                    "defaultValue": {
-                        "value": ""
-                    },
-                    "field": "first_name",
-                    "seqType": "Sequelize.STRING(50)"
-                },
-                "last_name": {
-                    "defaultValue": {
-                        "value": ""
-                    },
-                    "field": "last_name",
-                    "seqType": "Sequelize.STRING(50)"
-                },
-                "password": {
-                    "allowNull": false,
-                    "field": "password",
-                    "seqType": "Sequelize.STRING"
                 },
                 "createdAt": {
                     "allowNull": false,
@@ -111,5 +90,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 1
 }

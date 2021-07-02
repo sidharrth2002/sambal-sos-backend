@@ -5,79 +5,40 @@ var Sequelize = require('sequelize');
 /**
  * Actions summary:
  *
- * createTable "flags", deps: [users]
+ * removeColumn "title" from table "flags"
+ * removeColumn "status" from table "flags"
+ * addColumn "image" to table "flags"
  *
  **/
 
 var info = {
     "revision": 2,
     "name": "noname",
-    "created": "2021-06-30T15:34:37.454Z",
+    "created": "2021-07-02T15:34:22.878Z",
     "comment": ""
 };
 
 var migrationCommands = [{
-    fn: "createTable",
-    params: [
-        "flags",
-        {
-            "id": {
-                "type": Sequelize.UUID,
-                "field": "id",
-                "primaryKey": true,
-                "allowNull": false,
-                "defaultValue": Sequelize.UUIDV4
-            },
-            "title": {
+        fn: "removeColumn",
+        params: ["flags", "title"]
+    },
+    {
+        fn: "removeColumn",
+        params: ["flags", "status"]
+    },
+    {
+        fn: "addColumn",
+        params: [
+            "flags",
+            "image",
+            {
                 "type": Sequelize.TEXT,
-                "field": "title",
-                "allowNull": true
-            },
-            "latitude": {
-                "type": Sequelize.DECIMAL(10, 6),
-                "field": "latitude",
-                "allowNull": false
-            },
-            "longitude": {
-                "type": Sequelize.DECIMAL(10, 6),
-                "field": "longitude",
-                "allowNull": false
-            },
-            "status": {
-                "type": Sequelize.ENUM('Pending', 'In Progress', 'Completed', 'False Report'),
-                "field": "status",
-                "allowNull": true
-            },
-            "description": {
-                "type": Sequelize.TEXT,
-                "field": "description",
-                "allowNull": true
-            },
-            "createdAt": {
-                "type": Sequelize.DATE,
-                "field": "createdAt",
-                "allowNull": false
-            },
-            "updatedAt": {
-                "type": Sequelize.DATE,
-                "field": "updatedAt",
-                "allowNull": false
-            },
-            "userId": {
-                "type": Sequelize.INTEGER,
-                "field": "userId",
-                "onUpdate": "CASCADE",
-                "onDelete": "SET NULL",
-                "references": {
-                    "model": "users",
-                    "key": "id"
-                },
+                "field": "image",
                 "allowNull": true
             }
-        },
-        {}
-    ]
-}];
+        ]
+    }
+];
 
 module.exports = {
     pos: 0,

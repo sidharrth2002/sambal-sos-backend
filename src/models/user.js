@@ -5,27 +5,15 @@ const logger = require('../../winston-config')
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('user', {
     id: {
-      type: DataTypes.INTEGER(11),
+      defaultValue: DataTypes.UUIDV4,
+      type: DataTypes.UUID,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
     },
     email: {
       type: DataTypes.STRING(50),
       allowNull: false,
       unique: true
-    },
-    first_name: {
-      type: DataTypes.STRING(50),
-      defaultValue: ''
-    },
-    last_name: {
-      type: DataTypes.STRING(50),
-      defaultValue: ''
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false
     }
   })
 
@@ -36,17 +24,17 @@ module.exports = (sequelize, DataTypes) => {
   /**
    * beforeCreate hook on User instance to hash the password
    */
-  User.addHook('beforeCreate', async (user, options) => {
-    const salt = await bcrypt.genSalt(parseInt(process.env.SALT))
-    user.password = await bcrypt.hash(user.password, salt)
-  })
+  // User.addHook('beforeCreate', async (user, options) => {
+  //   const salt = await bcrypt.genSalt(parseInt(process.env.SALT))
+  //   user.password = await bcrypt.hash(user.password, salt)
+  // })
 
   /**
    * User instanceMethod to Validate the password
    */
-  User.prototype.validPassword = function (password) {
-    return bcrypt.compareSync(password, this.password)
-  }
+  // User.prototype.validPassword = function (password) {
+  //   return bcrypt.compareSync(password, this.password)
+  // }
 
   /**
    * Checks whether user with same unique field already exist or not

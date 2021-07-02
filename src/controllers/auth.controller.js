@@ -1,6 +1,7 @@
 const JWT = require('jsonwebtoken')
 const { body } = require('express-validator')
-
+const { OAuth2Client } = require('google-auth-library')
+const client = new OAuth2Client(process.env.CLIENT_ID);
 const logger = require('../../winston-config')
 const db = require('../models')
 
@@ -187,5 +188,36 @@ module.exports.login = (req, res) => {
         message: 'User not found'
       })
     }
+  })
+}
+
+module.exports.googleLogin = async (req, res) => {
+  const { token } = req.body;
+  const ticket = await client.verifyIdToken({
+    idToken: token,
+    audience: process.env.CLIENT_ID
+  })
+  const { email: userEmail } = ticket.getPayload();
+
+  db.user.findOrCreate({
+    where: {
+      email: userEmail
+    },
+    defaults: {
+      email: userEmail
+    }
+  }).spread((newUser, created) => {
+    let spreadUser = newUser.get({
+      plain: true
+    })
+    const jwt = JWT.sign({
+      data: spreadUser.id
+    },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: '100000000m'
+    }
+  );
+    res.status(201).send({ status: 'Logged In', accessToken: jwt, user: spreadUser })
   })
 }
