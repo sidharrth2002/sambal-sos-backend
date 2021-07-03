@@ -1,12 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const { validate } = require('../../utils/utils')
-const { createFlag, getAllFlags, deleteFlag } = require('../controllers/flag.controller')
+const { validate, ValidateJWT } = require('../../utils/utils')
+const { createFlag, getAllFlags, deleteFlag, getAllFlagsInRadius, getApprovedFlags } = require('../controllers/flag.controller')
 
-router.get('/getall', getAllFlags)
+router.get('/getall', ValidateJWT, getAllFlags)
 
-router.post('/createflag', createFlag)
+router.get('/getapproved', ValidateJWT, getApprovedFlags)
 
-router.post('/deleteflag', deleteFlag)
+router.get('/getallinradius', ValidateJWT, getAllFlagsInRadius)
 
-module.exports = router
+router.post('/createflag', ValidateJWT, createFlag)
+
+router.post('/deleteflag', ValidateJWT, deleteFlag)
+
+module.exports = router;

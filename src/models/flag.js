@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.GEOMETRY('POINT'),
         allowNull: false,
     },
+    address: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
     description: {
         type: DataTypes.TEXT,
         allowNull: true,
@@ -24,6 +28,11 @@ module.exports = (sequelize, DataTypes) => {
     image: {
         type: DataTypes.TEXT,
         allowNull: true
+    },
+    status: {
+      type: DataTypes.ENUM('PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED'),
+      defaultValue: 'PENDING',
+      allowNull: false
     }
   })
 

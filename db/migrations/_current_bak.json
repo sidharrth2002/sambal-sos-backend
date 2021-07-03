@@ -13,25 +13,33 @@
                     "field": "id",
                     "seqType": "Sequelize.UUID"
                 },
-                "title": {
-                    "allowNull": true,
-                    "field": "title",
-                    "seqType": "Sequelize.TEXT"
-                },
                 "coordinates": {
                     "allowNull": false,
                     "field": "coordinates",
                     "seqType": "Sequelize.GEOMETRY('POINT')"
                 },
-                "status": {
+                "address": {
                     "allowNull": true,
-                    "field": "status",
-                    "seqType": "Sequelize.ENUM('Pending', 'In Progress', 'Completed', 'False Report')"
+                    "field": "address",
+                    "seqType": "Sequelize.TEXT"
                 },
                 "description": {
                     "allowNull": true,
                     "field": "description",
                     "seqType": "Sequelize.TEXT"
+                },
+                "image": {
+                    "allowNull": true,
+                    "field": "image",
+                    "seqType": "Sequelize.TEXT"
+                },
+                "status": {
+                    "defaultValue": {
+                        "value": "PENDING"
+                    },
+                    "allowNull": false,
+                    "field": "status",
+                    "seqType": "Sequelize.ENUM('PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED')"
                 },
                 "createdAt": {
                     "allowNull": false,
@@ -90,5 +98,5 @@
             "indexes": []
         }
     },
-    "revision": 1
+    "revision": 3
 }

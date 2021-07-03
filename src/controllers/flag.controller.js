@@ -3,20 +3,16 @@ const db = require("../models");
 const sequelize = require("sequelize");
 
 // get paginated version of all flags
-// by default, will only send back 10
 module.exports.getAllFlags = (req, res) => {
   const { offset, limit } = req.body;
 
   db.flag
     .findAll({
-      limit: !limit ? 10 : limit,
+      limit: !limit ? null : limit,
       offset: !offset ? null : offset
     })
     .then((flags) => {
-      res.status(200).json({
-        status: true,
-        data: flags,
-      });
+      res.status(200).json(flags);
     })
     .catch(err => {
       res.status(500).send(err);
@@ -27,33 +23,25 @@ module.exports.getAllFlags = (req, res) => {
 module.exports.getAllFlagsInRadius = async (req, res) => {
   const { radius, latitude, longitude } = req.body;
 
-  const coordinates = sequelize.literal(
-    `ST_GeomFromText('POINT(${longitude} ${latitude})')`
-  );
-  const distance = sequelize.fn(
-    "ST_Distance_Sphere",
-    sequelize.col("coordinates"),
-    coordinates
-  );
-  db.flag
-    .findAll({
-      order: distance,
-      where: sequelize.where(distance, { $lte: radius }),
-      logging: console.log,
-    })
-    .then((inRadius) => {
-      res.status(200).send(inRadius)
-    })
-    .catch(err => {
-      res.status(500).send(err);
-    })
+  db.flag.findAll({
+    attributes: [[sequelize.literal("6371 * acos(cos(radians("+latitude+")) * cos(radians(ST_X(coordinates))) * cos(radians("+longitude+") - radians(ST_Y(coordinates))) + sin(radians("+latitude+")) * sin(radians(ST_X(coordinates))))"),'distance']],
+    order: sequelize.col('distance'),
+    limit: 10,
+  })
+  .then(inRadius => {
+    console.log(inRadius);
+    res.status(200).send(inRadius);
+  })
+
 };
 
 // create new flag
 module.exports.createFlag = (req, res) => {
   // for now, send from frontend
   // after this, take the ID from JWT
-  const { latitude, longitude, description, userId } = req.body;
+  const { latitude, longitude, description, image } = req.body;
+
+  const userId = req.decoded.data;
 
   const coordinates = {
     type: "Point",
@@ -63,9 +51,11 @@ module.exports.createFlag = (req, res) => {
     .create({
       description: description,
       coordinates,
-      userId: userId,
+      userId,
+      image,
+      status: 'APPROVED'
     })
-    .then((newFlag) => res.status(201).send(newFlag))
+    .then((newFlag) => res.status(200).send(newFlag))
     .catch(err => {
       res.status(500).send(err);
     })
@@ -81,10 +71,29 @@ module.exports.deleteFlag = (req, res) => {
       id
     }
   })
-  .then((stat) => res.status(204).send(stat))
+  .then((stat) => res.sendStatus(200))
   .catch(err => {
     res.status(500).send(err);
   })
+}
+
+module.exports.getApprovedFlags = (req, res) => {
+  const { offset, limit } = req.body;
+
+  db.flag
+    .findAll({
+      limit: !limit ? null : limit,
+      offset: !offset ? null : offset,
+      where: {
+        status: "APPROVED"
+      }
+    })
+    .then((flags) => {
+      res.status(200).send(flags);
+    })
+    .catch(err => {
+      res.status(500).send(err);
+    })
 }
 
 // Delete this soon

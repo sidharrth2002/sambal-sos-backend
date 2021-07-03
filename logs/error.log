@@ -22,3 +22,22 @@
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-02T16:04:29.289Z"}
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-02T16:04:29.422Z"}
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-02T16:06:44.838Z"}
+{"message":"JWT: jwt must be provided","level":"error","timestamp":"2021-07-03T06:36:52.854Z"}
+{"message":"Error occured: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client","level":"error","timestamp":"2021-07-03T06:36:52.857Z"}
+{"message":"JWT: jwt must be provided","level":"error","timestamp":"2021-07-03T06:37:23.411Z"}
+{"message":"Error occured: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client","level":"error","timestamp":"2021-07-03T06:37:23.415Z"}
+{"message":"JWT: invalid token","level":"error","timestamp":"2021-07-03T06:38:23.455Z"}
+{"message":"JWT: invalid token","level":"error","timestamp":"2021-07-03T06:39:25.324Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-03T06:55:44.684Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-03T06:55:44.786Z"}
+{"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:00:43.491Z"}
+{"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:01:04.856Z"}
+{"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:01:47.351Z"}
+{"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:03:59.559Z"}
+{"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:04:29.719Z"}
+{"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:05:40.281Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-07-03T07:26:45.935Z"}
+{"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-03T07:26:58.193Z"}
+{"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:27:43.603Z"}
+{"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-03T08:58:51.191Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-07-03T08:59:20.422Z"}

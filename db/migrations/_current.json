@@ -18,6 +18,11 @@
                     "field": "coordinates",
                     "seqType": "Sequelize.GEOMETRY('POINT')"
                 },
+                "address": {
+                    "allowNull": true,
+                    "field": "address",
+                    "seqType": "Sequelize.TEXT"
+                },
                 "description": {
                     "allowNull": true,
                     "field": "description",
@@ -27,6 +32,14 @@
                     "allowNull": true,
                     "field": "image",
                     "seqType": "Sequelize.TEXT"
+                },
+                "status": {
+                    "defaultValue": {
+                        "value": "PENDING"
+                    },
+                    "allowNull": false,
+                    "field": "status",
+                    "seqType": "Sequelize.ENUM('PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED')"
                 },
                 "createdAt": {
                     "allowNull": false,
@@ -69,7 +82,7 @@
                     "allowNull": false,
                     "unique": true,
                     "field": "email",
-                    "seqType": "Sequelize.STRING(50)"
+                    "seqType": "Sequelize.STRING"
                 },
                 "createdAt": {
                     "allowNull": false,
@@ -85,5 +98,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 4
 }

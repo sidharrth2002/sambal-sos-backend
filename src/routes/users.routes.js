@@ -7,6 +7,6 @@ const { route } = require('./auth.routes')
 
 router.post('/createtest', createTestUser)
 
-router.get('/users', getAllUsers)
+router.get('/users', ValidateJWT, getAllUsers)
 
 module.exports = router

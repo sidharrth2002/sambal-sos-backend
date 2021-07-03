@@ -3,22 +3,24 @@ const { validationResult } = require('express-validator')
 const logger = require('../winston-config')
 
 module.exports.ValidateJWT = (req, res, next) => {
-  const token = req.headers['x-access-token'] || req.headers.authorization
+  const token = req.headers['x-access-token'] || req.headers.authorization.split(' ')[1]
+
+  console.log(token);
 
   if (!token) {
-    res.status(400).json({ status: false, message: 'Token required' })
+    res.status(400).send({ status: false, message: 'Token required' })
+  } else {
+    JWT.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+      if (err) {
+        logger.error(`JWT: ${err.message}`)
+        return res
+          .status(401)
+          .json({ status: false, error: 'Token is not valid' })
+      }
+      req.decoded = decoded
+      next()
+    })
   }
-
-  JWT.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-    if (err) {
-      logger.error(`JWT: ${err.message}`)
-      return res
-        .status(401)
-        .json({ status: false, error: 'Token is not valid' })
-    }
-    req.decoded = decoded
-    next()
-  })
 }
 
 module.exports.validate = (req, res, next) => {
