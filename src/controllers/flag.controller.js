@@ -9,7 +9,10 @@ module.exports.getAllFlags = (req, res) => {
   db.flag
     .findAll({
       limit: !limit ? null : limit,
-      offset: !offset ? null : offset
+      offset: !offset ? null : offset,
+      where: {
+        status: "APPROVED"
+      }
     })
     .then((flags) => {
       res.status(200).json(flags);
@@ -53,7 +56,7 @@ module.exports.createFlag = (req, res) => {
       coordinates,
       userId,
       image,
-      status: 'APPROVED'
+      status: 'PENDING'
     })
     .then((newFlag) => res.status(200).send(newFlag))
     .catch(err => {

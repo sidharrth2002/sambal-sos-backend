@@ -4,6 +4,8 @@ const morgan = require('morgan')
 const swaggerJSDoc = require('swagger-jsdoc')
 const swaggerUI = require('swagger-ui-express')
 
+require('dotenv').config()
+
 const { swaggerDocument, swaggerOptions } = require('./swagger.config')
 const db = require('./src/models')
 const routes = require('./src/routes')
@@ -12,11 +14,9 @@ const cors = require('cors');
 // Modules
 const logger = require('./winston-config')
 
-require('dotenv').config()
-
 let port = process.env.NODE_PORT
 if (isNaN(parseInt(port))) {
-  port = 5000
+  port = 8080
 }
 // create express app
 const app = express()
@@ -27,6 +27,8 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(helmet())
+
+console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV !== 'production') {
   // app.use(morgan('dev'));
@@ -57,6 +59,10 @@ db.sequelize.sync()
     throw new Error(`Unable to connect to the database:' ${err.message}`)
   })
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Bendera Putih API! You should not be here.')
+})
+
 app.use('/api', routes)
 
 app.use((req, res, next) => {
@@ -76,8 +82,8 @@ app.use((error, req, res, next) => {
   });
 });
 
-const server = app.listen(port, () => {
-  logger.info(`server started on port ${port}`)
+const server = app.listen(process.env.PORT || 8080, () => {
+  logger.info(`server started on port ${process.env.PORT || 8080}`)
 })
 
 process.on('SIGINT', () => {

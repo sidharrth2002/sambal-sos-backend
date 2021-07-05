@@ -1,16 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const { validate } = require('../../utils/utils')
 const {
-  validateRules,
-  signup,
-  login,
   googleLogin
 } = require('../controllers/auth.controller')
 
-router.post('/signup', validateRules('signup'), validate, signup)
+// Remove login and signup because only google auth allowed now
+// router.post('/signup', validateRules('signup'), validate, signup)
 
-router.post('/login', validateRules('login'), validate, login)
+// router.post('/login', validateRules('login'), validate, login)
 
 router.post('/google', googleLogin)
 

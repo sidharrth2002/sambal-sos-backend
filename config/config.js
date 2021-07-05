@@ -20,14 +20,22 @@ module.exports = {
     operatorsAliases: false
   },
   production: {
-    url: process.env.DATABASE_URL,
+    // host: process.env.DB_HOST,
+    username: process.env.DB_USER,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASS,
+    host: process.env.DB_HOST,
     // username: process.env.DB_PROD_USER,
     // password: process.env.DB_PROD_PASSWORD,
     // database: process.env.DB_PROD_DATABASE,
     // host: process.env.DB_PROD_HOST,
     // port: process.env.DB_PROD_PORT,
     dialect: 'postgres',
+    dialectOptions: {
+      socketPath: process.env.DB_HOST
+    },
     logging: false,
-    operatorsAliases: false
-  }
+    operatorsAliases: false,
+    use_env_variable: true
+  },
 }

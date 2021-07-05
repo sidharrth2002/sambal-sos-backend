@@ -41,3 +41,13 @@
 {"message":"JWT: jwt malformed","level":"error","timestamp":"2021-07-03T07:27:43.603Z"}
 {"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-03T08:58:51.191Z"}
 {"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-07-03T08:59:20.422Z"}
+{"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-03T16:24:43.594Z"}
+{"message":"Unable to connect to the database:' connect ENOENT /cloudsql/bendera-putih-database/.s.PGSQL.5432","level":"error","timestamp":"2021-07-03T16:43:20.694Z"}
+{"message":"Unable to connect to the database:' connect ENOENT /cloudsql/bendera-putih-database/.s.PGSQL.5432","level":"error","timestamp":"2021-07-03T16:58:00.174Z"}
+{"message":"Unable to connect to the database:' connect ENOENT /cloudsql/mesolitica-cloud:asia-southeast1:bendera-putih-database/.s.PGSQL.5432","level":"error","timestamp":"2021-07-03T17:07:28.512Z"}
+{"message":"Unable to connect to the database:' connect ENOENT /cloudsql/mesolitica-cloud:asia-southeast1:bendera-putih-database/.s.PGSQL.5432","level":"error","timestamp":"2021-07-03T17:11:35.294Z"}
+{"message":"Unable to connect to the database:' connect ENOENT /cloudsql/mesolitica-cloud:asia-southeast1:bendera-putih-database/.s.PGSQL.5432","level":"error","timestamp":"2021-07-03T17:18:47.839Z"}
+{"message":"Unable to connect to the database:' connect ENOENT /cloudsql/mesolitica-cloud:asia-southeast1:bendera-putih-database/.s.PGSQL.5432","level":"error","timestamp":"2021-07-04T03:46:50.730Z"}
+{"message":"Unable to connect to the database:' password authentication failed for user \"admin\"","level":"error","timestamp":"2021-07-04T03:51:18.374Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-04T17:10:53.742Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-07-04T17:42:06.841Z"}

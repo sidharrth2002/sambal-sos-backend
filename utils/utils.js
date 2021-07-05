@@ -5,8 +5,6 @@ const logger = require('../winston-config')
 module.exports.ValidateJWT = (req, res, next) => {
   const token = req.headers['x-access-token'] || req.headers.authorization.split(' ')[1]
 
-  console.log(token);
-
   if (!token) {
     res.status(400).send({ status: false, message: 'Token required' })
   } else {
