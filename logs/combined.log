@@ -755,3 +755,61 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-04T17:46:20.946Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-04T17:47:51.905Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-04T17:47:51.905Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:19:15.945Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:19:16.016Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:21:13.969Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:21:14.042Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:21:19.556Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:21:19.620Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T14:23:33.466Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T14:23:33.467Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:23:52.191Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:23:52.250Z"}
+{"message":"User not found: fsd@gmail.com","level":"info","timestamp":"2021-07-05T14:24:34.832Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:26:28.454Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:26:28.514Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:26:59.667Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:26:59.727Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:28:34.455Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:28:34.514Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-05T14:29:48.128Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-05T14:29:48.424Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T14:30:32.591Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T14:30:32.592Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T14:56:38.451Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T14:56:38.509Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T14:57:01.443Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T14:57:01.444Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T15:03:17.939Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T15:03:17.997Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-05T15:03:55.277Z"}
+{"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-05T15:04:03.100Z"}
+{"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-05T15:04:15.161Z"}
+{"message":"Error occured: ReferenceError: Op is not defined","level":"error","timestamp":"2021-07-05T15:04:30.305Z"}
+{"message":"Error occured: ReferenceError: Op is not defined","level":"error","timestamp":"2021-07-05T15:05:13.224Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:05:20.533Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:05:20.534Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:05:20.534Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:05:20.535Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T15:05:40.008Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T15:05:40.073Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:06:30.642Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:06:30.643Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:06:30.643Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:06:30.644Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T15:07:27.938Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T15:07:27.998Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:07:29.117Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:07:29.118Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T15:07:31.693Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T15:07:31.751Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:07:32.917Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:07:32.918Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:07:32.919Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:07:32.920Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T15:07:37.176Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T15:07:37.239Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-05T15:10:36.580Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-05T15:10:36.642Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-05T15:11:04.190Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-05T15:11:04.191Z"}

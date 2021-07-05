@@ -1,8 +1,9 @@
 const logger = require("../../winston-config");
 const db = require("../models");
 const sequelize = require("sequelize");
+const moment = require("moment");
 
-// get paginated version of all flags
+// TODO: only send back reports made in the past week
 module.exports.getAllFlags = (req, res) => {
   const { offset, limit } = req.body;
 
@@ -11,7 +12,10 @@ module.exports.getAllFlags = (req, res) => {
       limit: !limit ? null : limit,
       offset: !offset ? null : offset,
       where: {
-        status: "APPROVED"
+        status: "APPROVED",
+        updatedAt: {
+          [sequelize.Op.gte]: moment().subtract(7, 'days').toDate()
+        }
       }
     })
     .then((flags) => {
@@ -23,6 +27,7 @@ module.exports.getAllFlags = (req, res) => {
 };
 
 // get flags within a radius
+// TODO: debug this
 module.exports.getAllFlagsInRadius = async (req, res) => {
   const { radius, latitude, longitude } = req.body;
 

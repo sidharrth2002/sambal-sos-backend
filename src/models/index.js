@@ -12,6 +12,8 @@ const db = {}
 
 let sequelize;
 
+console.log(env);
+
 if(env === 'development') {
   if (config.use_env_variable) {
     sequelize = new Sequelize(process.env[config.use_env_variable], config)

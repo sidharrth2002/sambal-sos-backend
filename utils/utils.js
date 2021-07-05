@@ -2,6 +2,7 @@ const JWT = require('jsonwebtoken')
 const { validationResult } = require('express-validator')
 const logger = require('../winston-config')
 
+// TODO: add roles to API
 module.exports.ValidateJWT = (req, res, next) => {
   const token = req.headers['x-access-token'] || req.headers.authorization.split(' ')[1]
 

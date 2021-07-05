@@ -51,3 +51,10 @@
 {"message":"Unable to connect to the database:' password authentication failed for user \"admin\"","level":"error","timestamp":"2021-07-04T03:51:18.374Z"}
 {"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-04T17:10:53.742Z"}
 {"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-07-04T17:42:06.841Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-05T14:29:48.128Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-05T14:29:48.424Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-05T15:03:55.277Z"}
+{"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-05T15:04:03.100Z"}
+{"message":"JWT: jwt expired","level":"error","timestamp":"2021-07-05T15:04:15.161Z"}
+{"message":"Error occured: ReferenceError: Op is not defined","level":"error","timestamp":"2021-07-05T15:04:30.305Z"}
+{"message":"Error occured: ReferenceError: Op is not defined","level":"error","timestamp":"2021-07-05T15:05:13.224Z"}

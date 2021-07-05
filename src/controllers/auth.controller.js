@@ -191,6 +191,7 @@ module.exports.login = (req, res) => {
   })
 }
 
+// TODO: Implement refresh token and store refresh tokens in a database table
 module.exports.googleLogin = async (req, res) => {
   const { token } = req.body;
 
@@ -223,3 +224,5 @@ module.exports.googleLogin = async (req, res) => {
     res.status(201).send({ status: 'Logged In', accessToken: jwt, user: spreadUser })
   })
 }
+
+// TODO: Facebook OAuth
