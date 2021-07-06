@@ -3,6 +3,8 @@ const helmet = require('helmet')
 const morgan = require('morgan')
 const swaggerJSDoc = require('swagger-jsdoc')
 const swaggerUI = require('swagger-ui-express')
+const cluster = require('cluster')
+const numCPUs = require('os').cpus().length
 
 require('dotenv').config()
 
@@ -82,13 +84,22 @@ app.use((error, req, res, next) => {
   });
 });
 
-const server = app.listen(process.env.PORT || 8080, () => {
-  logger.info(`server started on port ${process.env.PORT || 8080}`)
-})
+let server
 
-process.on('SIGINT', () => {
-  logger.warn('SIGINT RECEIVED. Shutting down gracefully')
-  server.close(() => {
-    logger.info('💥 Process terminated!')
+if (cluster.isMaster && process.env.NODE_ENV === 'production') {
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork()
+  } 
+} else {
+  server = app.listen(process.env.PORT || 8080, () => {
+    logger.info(`server started on port ${process.env.PORT || 8080}`)
   })
-})
+
+  process.on('SIGINT', () => {
+   logger.warn('SIGINT RECEIVED. Shutting down gracefully')
+   server.close(() => {
+     logger.info('💥 Process terminated!')
+   })
+  })
+}
+
