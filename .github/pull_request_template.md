@@ -1,4 +1,4 @@
-**NAMING CONVENTION: FEAT/FIX/REFACTOR nameOfContribution**
+<!--NAMING CONVENTION: FEAT/FIX/REFACTOR nameOfContribution!-->
 
 **What type of change did you make?**
 
