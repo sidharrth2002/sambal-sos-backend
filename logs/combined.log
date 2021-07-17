@@ -1224,3 +1224,5 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-15T16:52:40.369Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-15T16:52:43.483Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-15T16:52:43.484Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T05:15:06.246Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T05:15:06.346Z"}
