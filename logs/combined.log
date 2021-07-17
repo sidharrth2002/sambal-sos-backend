@@ -755,3 +755,69 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-04T17:46:20.946Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-04T17:47:51.905Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-04T17:47:51.905Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:37:17.654Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:37:20.970Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:42:23.437Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:42:23.662Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:43:11.220Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:43:11.336Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:45:58.049Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:45:58.163Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:48:03.439Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:48:03.775Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:48:17.272Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:48:17.545Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:54:41.074Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:54:41.167Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T03:55:35.601Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T03:55:35.716Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:00:11.210Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:00:11.476Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:01:03.929Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:01:04.030Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:06:40.814Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:06:40.891Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:07:36.031Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:07:36.110Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:07:46.187Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:07:46.262Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:07:56.758Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:07:56.850Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:09:19.861Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:09:20.018Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:10:19.530Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:10:19.638Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:11:32.896Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:11:33.097Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:12:31.474Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:12:31.619Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:12:59.386Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:12:59.586Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:13:25.548Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:13:25.693Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:15:32.506Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:15:32.578Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:15:55.943Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:15:56.148Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:16:05.494Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:16:05.585Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:19:50.979Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:19:51.066Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:21:15.655Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:21:15.772Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:22:09.333Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:22:09.436Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:25:01.538Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:25:01.610Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:26:10.293Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:26:10.377Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:26:30.748Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:26:30.991Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:26:41.244Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:26:41.314Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:27:47.017Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:27:47.095Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-17T04:42:22.386Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-17T04:42:22.386Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-17T04:56:45.108Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-17T04:56:45.212Z"}

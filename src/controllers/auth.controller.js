@@ -191,6 +191,46 @@ module.exports.login = (req, res) => {
   })
 }
 
+/**
+ * @swagger
+ *
+ *  paths:
+ *    /api/auth/google:
+ *      post:
+ *        description: Login to Application using Google Oauth
+ *        tags:
+ *          - Auth
+ *        requestBody:
+ *          required: true
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  token:
+ *                    type: string
+ *        responses:
+ *          201:
+ *            description: login successful
+ *            content:
+ *              application/json:
+ *                schema:
+ *                  type: object
+ *                  properties:
+ *                    status:
+ *                      type: boolean
+ *                    access_token:
+ *                      type: string
+ *                    user:
+ *                      type: object
+ *                      properties:
+ *                        id: 
+ *                          type: string
+ *                          format: uuid
+ *                        email:
+ *                          type: string
+ *                          format: email
+ */
 module.exports.googleLogin = async (req, res) => {
   const { token } = req.body;
 

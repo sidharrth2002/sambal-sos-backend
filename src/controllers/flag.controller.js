@@ -3,6 +3,62 @@ const db = require("../models");
 const sequelize = require("sequelize");
 
 // get paginated version of all flags
+/**
+ * @swagger
+ *
+ *  paths:
+ *    /api/flag/getall:
+ *      get:
+ *        description: Get All flags in DB
+ *        tags:
+ *          - Flag
+ *        requestBody:
+ *          required: true
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  offset:
+ *                    type: integer
+ *                  limit:
+ *                    type: integer
+ *        responses:
+ *          200:
+ *            description: sucessfully gotten all flags
+ *            content:
+ *              application/json:
+ *                schema:
+ *                  type: array
+ *                  items:
+ *                    type: object
+ *                    properties:
+ *                      id: 
+ *                        type: string
+ *                        format: uuid
+ *                      coordinates: 
+ *                        type: object
+ *                        properties:
+ *                          coordinates: 
+ *                            type: array
+ *                            items: 
+ *                              type: integer
+ *                            example: [0, 0]
+ *                          
+ *                      address: 
+ *                        type: string
+ *                      description:     
+ *                        type: string
+ *                      image: 
+ *                        type: string
+ *                      status: 
+ *                        type: string
+ *                        enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
+ *            500:
+ *              description: Error
+ *          
+ */
+
 module.exports.getAllFlags = (req, res) => {
   const { offset, limit } = req.body;
 
@@ -23,6 +79,63 @@ module.exports.getAllFlags = (req, res) => {
 };
 
 // get flags within a radius
+/**
+ * @swagger
+ *
+ *  paths:
+ *    /api/flag/getallinradius:
+ *      get:
+ *        description: Get All flags in the radius of user
+ *        tags:
+ *          - Flag
+ *        requestBody:
+ *          required: true
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  radius: 
+ *                    type: integer
+ *                  longitude: 
+ *                    type: number
+ *                  latitude:
+ *                     type: number
+ *        responses:
+ *          200:
+ *            description: sucessfully gotten all flags
+ *            content:
+ *              application/json:
+ *                schema:
+ *                  type: array
+ *                  items:
+ *                    type: object
+ *                    properties:
+ *                      id: 
+ *                        type: string
+ *                        format: uuid
+ *                      coordinates: 
+ *                        type: object
+ *                        properties:
+ *                          coordinates: 
+ *                            type: array
+ *                            items: 
+ *                              type: integer
+ *                            example: [0, 0]
+ *                          
+ *                      address: 
+ *                        type: string
+ *                      description:     
+ *                        type: string
+ *                      image: 
+ *                        type: string
+ *                      status: 
+ *                        type: string
+ *                        enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
+ *            500:
+ *              description: Error
+ *          
+ */
 module.exports.getAllFlagsInRadius = async (req, res) => {
   const { radius, latitude, longitude } = req.body;
 
@@ -39,6 +152,63 @@ module.exports.getAllFlagsInRadius = async (req, res) => {
 };
 
 // create new flag
+/**
+ * @swagger
+ *
+ *  paths:
+ *    /api/flag/createflag:
+ *      post:
+ *        description: Create a new flag
+ *        tags:
+ *          - Flag
+ *        requestBody:
+ *          required: true
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  longitude: 
+ *                    type: number
+ *                  latitude:
+ *                     type: number
+ *                  description: 
+ *                     type: string
+ *                  image:
+ *                     type: string
+ *        responses:
+ *          200:
+ *            description: sucessfully created a new flag
+ *            content:
+ *              application/json:
+ *                schema:
+ *                   type: object
+ *                   properties:
+ *                     id: 
+ *                       type: string
+ *                       format: uuid
+ *                     coordinates: 
+ *                       type: object
+ *                       properties:
+ *                         coordinates: 
+ *                           type: array
+ *                           items: 
+ *                             type: integer
+ *                           example: [0, 0]
+ *                          
+ *                     address: 
+ *                       type: string
+ *                     description:     
+ *                       type: string
+ *                     image: 
+ *                       type: string
+ *                     status: 
+ *                       type: string
+ *                       enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
+ *            500:
+ *              description: Error
+ *          
+ */
 module.exports.createFlag = (req, res) => {
   // for now, send from frontend
   // after this, take the ID from JWT
@@ -80,6 +250,61 @@ module.exports.deleteFlag = (req, res) => {
   })
 }
 
+/**
+ * @swagger
+ *
+ *  paths:
+ *    /api/flag/getapproved:
+ *      get:
+ *        description: Get All Approved flags in DB
+ *        tags:
+ *          - Flag
+ *        requestBody:
+ *          required: true
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  offset:
+ *                    type: integer
+ *                  limit:
+ *                    type: integer
+ *        responses:
+ *          200:
+ *            description: sucessfully gotten all flags
+ *            content:
+ *              application/json:
+ *                schema:
+ *                  type: array
+ *                  items:
+ *                    type: object
+ *                    properties:
+ *                      id: 
+ *                        type: string
+ *                        format: uuid
+ *                      coordinates: 
+ *                        type: object
+ *                        properties:
+ *                          coordinates: 
+ *                            type: array
+ *                            items: 
+ *                              type: integer
+ *                            example: [0, 0]
+ *                          
+ *                      address: 
+ *                        type: string
+ *                      description:     
+ *                        type: string
+ *                      image: 
+ *                        type: string
+ *                      status: 
+ *                        type: string
+ *                        enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
+ *            500:
+ *              description: Error
+ *          
+ */
 module.exports.getApprovedFlags = (req, res) => {
   const { offset, limit } = req.body;
 
