@@ -54,8 +54,9 @@ module.exports = {
                     index++;
                     queryInterface[command.fn].apply(queryInterface, command.params).then(next, reject);
                 }
-                else
-                    resolve();
+                else {
+                    queryInterface.sequelize.query('DROP TYPE IF EXISTS enum_flags_status').then(resolve);
+                }
             }
             next();
         });

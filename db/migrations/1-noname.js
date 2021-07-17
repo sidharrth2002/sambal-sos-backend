@@ -112,19 +112,28 @@ module.exports = {
     pos: 0,
     up: function(queryInterface, Sequelize)
     {
-        var index = this.pos;
+        let index = this.pos;
+
         return new Promise(function(resolve, reject) {
-            function next() {
-                if (index < migrationCommands.length)
-                {
+            function performMigrationStep() {
                     let command = migrationCommands[index];
-                    console.log("[#"+index+"] execute: " + command.fn);
+                    console.log("[#" + index + "] execute: " + command.fn);
                     index++;
                     queryInterface[command.fn].apply(queryInterface, command.params).then(next, reject);
-                }
-                else
-                    resolve();
             }
+
+            function next() {
+                    if (index < migrationCommands.length) {
+                        if (index === 0) {
+                            queryInterface.sequelize.query('CREATE EXTENSION IF NOT EXISTS postgis;')
+                              .then(() => { performMigrationStep() });
+                        } else {
+                            performMigrationStep();
+                        }
+                    } else {
+                        resolve();
+                    }
+                }
             next();
         });
     },
