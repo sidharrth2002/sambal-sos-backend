@@ -2,7 +2,7 @@ module.exports.swaggerDocument = {
   definition: {
     openapi: '3.0.0', // Specification (optional, defaults to swagger: '2.0')
     info: {
-      title: 'Node Auth Mysql', // Title (required)
+      title: 'Bendera Putih Backend', // Title (required)
       version: '1.0.0' // Version (required)
     }
   },
