@@ -1,5 +1,5 @@
 {
-  "name": "auth-mysql",
+  "name": "sambal-sos-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "lint:fix": "npx standard --fix && echo 'Lint complete.'",
     "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js"
   },
-  "author": "Rohit Ambre",
+  "author": "Sidharrth Nagappan, Mak Yen Wei, Cornelius Pang and the Malaysian Developer Community",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/storage": "^5.8.5",
