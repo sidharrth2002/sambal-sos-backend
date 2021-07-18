@@ -4,6 +4,7 @@ const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client(process.env.CLIENT_ID);
 const logger = require("../../winston-config");
 const db = require("../models");
+const axios = require("axios");
 
 exports.validateRules = (method) => {
   switch (method) {
@@ -223,7 +224,7 @@ module.exports.login = (req, res) => {
  *                    user:
  *                      type: object
  *                      properties:
- *                        id: 
+ *                        id:
  *                          type: string
  *                          format: uuid
  *                        email:
@@ -268,4 +269,40 @@ module.exports.googleLogin = async (req, res) => {
     });
 };
 
-// TODO: Facebook OAuth
+module.exports.facebookLogin = async (req, res) => {
+  const { userID, accessToken } = req.body;
+
+  let url = `https://graph.facebook.com/v11.0/${userID}/?fields=email&access_token=${accessToken}`;
+  let facebookAuth = await axios.get(url);
+  const { email } = facebookAuth.data;
+  const [user, created] = await db.user.findOrCreate({
+    where: {
+      email,
+    },
+    defaults: {
+      email,
+    },
+  });
+
+  if (user) {
+    let spreadUser = user.get({
+      plain: true,
+    });
+    const jwt = JWT.sign(
+      {
+        data: spreadUser.id,
+      },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: process.env.JWT_EXPIRY,
+      }
+    );
+    res
+      .status(201)
+      .send({ status: "Logged In", accessToken: jwt, user: spreadUser });
+  } else {
+    res
+      .status(400)
+      .send({ status: "Failed" });
+  }
+};
