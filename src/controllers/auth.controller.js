@@ -269,7 +269,6 @@ module.exports.googleLogin = async (req, res) => {
     });
 };
 
-// TODO: Facebook OAuth
 module.exports.facebookLogin = async (req, res) => {
   const { userID, accessToken } = req.body;
 

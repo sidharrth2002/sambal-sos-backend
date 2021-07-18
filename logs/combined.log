@@ -1248,3 +1248,5 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-18T03:02:42.090Z"}
 {"message":"server started on port 8080","level":"info","timestamp":"2021-07-18T03:02:48.268Z"}
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-18T03:02:48.326Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-18T03:39:57.651Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-18T03:39:57.718Z"}
