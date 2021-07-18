@@ -279,16 +279,16 @@ module.exports.googleLogin = async (req, res) => {
 
 /**
 * @swagger
-* paths: 
+* paths:
 *   /api/auth/facebook:
-*     post: 
+*     post:
 *       description: Oauth login using Facebook
-*       tags: 
+*       tags:
 *         - Auth
 *       requestBody:
-*         required: 
-*           true 
-*         content: 
+*         required:
+*           true
+*         content:
 *           application/json:
 *             schema:
 *               type: object
@@ -326,8 +326,8 @@ module.exports.googleLogin = async (req, res) => {
 *             application/json:
 *               schema:
 *                 type: object
-*                 properties: 
-*                   status: 
+*                 properties:
+*                   status:
 *                     type: string
 *                     default: "Failed"
 */
