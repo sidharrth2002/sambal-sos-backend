@@ -51,6 +51,23 @@
                     "field": "status",
                     "seqType": "Sequelize.ENUM('PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED')"
                 },
+                "rejectionReason": {
+                    "allowNull": false,
+                    "field": "rejectionReason",
+                    "seqType": "Sequelize.TEXT"
+                },
+                "assignedAdmin": {
+                    "allowNull": true,
+                    "field": "assignedAdmin",
+                    "name": "assignedAdmin",
+                    "references": {
+                        "model": "users",
+                        "key": "id"
+                    },
+                    "onDelete": "SET NULL",
+                    "onUpdate": "CASCADE",
+                    "seqType": "Sequelize.UUID"
+                },
                 "createdAt": {
                     "allowNull": false,
                     "field": "createdAt",
@@ -94,6 +111,14 @@
                     "field": "email",
                     "seqType": "Sequelize.STRING"
                 },
+                "role": {
+                    "allowNull": false,
+                    "defaultValue": {
+                        "value": "USER"
+                    },
+                    "field": "role",
+                    "seqType": "Sequelize.ENUM('SUPERADMIN', 'ADMIN', 'USER')"
+                },
                 "createdAt": {
                     "allowNull": false,
                     "field": "createdAt",
@@ -108,5 +133,5 @@
             "indexes": []
         }
     },
-    "revision": 6
+    "revision": 7
 }

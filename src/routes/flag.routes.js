@@ -9,13 +9,13 @@ const {
   getApprovedFlags,
 } = require("../controllers/flag.controller");
 
-router.get("/getall", ValidateJWT, getAllFlags);
+router.get("/getall", ValidateJWT(), getAllFlags);
 
-router.get("/getapproved", ValidateJWT, getApprovedFlags);
+router.get("/getapproved", ValidateJWT(), getApprovedFlags);
 
-router.get("/getallinradius", ValidateJWT, getAllFlagsInRadius);
+router.get("/getallinradius", ValidateJWT(), getAllFlagsInRadius);
 
-router.post("/createflag", ValidateJWT, createFlag);
+router.post("/createflag", ValidateJWT(), createFlag);
 
 // admin permissions yet to set up
 // router.post('/deleteflag', deleteFlag)

@@ -3,7 +3,7 @@ const { validationResult } = require("express-validator");
 const logger = require("../winston-config");
 
 // TODO: add roles to API
-module.exports.ValidateJWT = (req, res, next) => {
+module.exports.ValidateJWT = (role) => (req, res, next) => {
   const token =
     req.headers["x-access-token"] || req.headers.authorization.split(" ")[1];
 
@@ -16,6 +16,21 @@ module.exports.ValidateJWT = (req, res, next) => {
         return res
           .status(401)
           .json({ status: false, error: "Token is not valid" });
+      }
+
+      if (role) {
+        const { role: decodedRole } = decoded || "USER";
+
+        const roleArray = ["SUPERADMIN", "ADMIN", "USER"];
+        const roleIndex = roleArray.indexOf(role);
+        const decodedRoleIndex = roleArray.indexOf(decodedRole);
+
+        if (decodedRoleIndex > roleIndex) {
+          return res.status(403).json({
+            status: false,
+            error: "User does not have valid role to access this resource",
+          });
+        }
       }
       req.decoded = decoded;
       next();

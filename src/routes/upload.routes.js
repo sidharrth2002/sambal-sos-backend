@@ -2,7 +2,7 @@ const express = require("express");
 const util = require("util");
 const router = express.Router();
 const { ValidateJWT } = require("../../utils/utils");
-const { minioUpload } = require("../controllers/upload.controller");
+/* const { minioUpload } = require("../controllers/upload.controller"); */
 
 const Multer = require("multer");
 let processFile = Multer({
@@ -23,7 +23,7 @@ let processFile = Multer({
 
 router.post(
   "/minioupload",
-  ValidateJWT,
+  ValidateJWT(),
   util.promisify(processFile),
   minioUpload
 );
