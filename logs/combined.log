@@ -1397,3 +1397,11 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-18T06:41:16.635Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-18T06:41:19.917Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-18T06:41:19.919Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-19T04:56:15.884Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-19T04:56:15.979Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-19T04:56:17.347Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-19T04:56:17.348Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-19T04:56:18.990Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-19T04:56:19.033Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-19T04:56:21.202Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-19T04:56:21.203Z"}

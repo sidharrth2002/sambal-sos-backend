@@ -1,5 +1,5 @@
-export const ROLES_ARRAY = Object.freeze(["SUPERUSER", "ADMIN", "ADMIN"]); // Array of role names, in order of highest to lowest privileges
-export const DEFAULT_ROLE = ROLES_ARRAY[ROLES_ARRAY.length - 1]; // Default role
+const ROLES_ARRAY = Object.freeze(["SUPERUSER", "ADMIN", "ADMIN"]); // Array of role names, in order of highest to lowest privileges
+const DEFAULT_ROLE = ROLES_ARRAY[ROLES_ARRAY.length - 1]; // Default role
 const rolesObject = {}; // Internally stored roles object
 
 /**
@@ -22,7 +22,7 @@ const rolesObject = {}; // Internally stored roles object
  *
  * @returns {Roles}
  */
-export const getRoles = () => {
+const getRoles = () => {
   if (Object.keys(rolesObject).length < ROLES_ARRAY.length) {
     ROLES_ARRAY.forEach((roleName, index) => {
       rolesObject[roleName] = {
@@ -35,6 +35,11 @@ export const getRoles = () => {
   return rolesObject;
 }
 
+module.exports = {
+  getRoles,
+  DEFAULT_ROLE,
+  ROLES_ARRAY
+}
 
 
 
