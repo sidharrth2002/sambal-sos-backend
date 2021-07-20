@@ -266,7 +266,10 @@ module.exports.googleLogin = async (req, res) => {
       res
         .status(201)
         .send({ status: "Logged In", accessToken: jwt, user: spreadUser });
-    });
+    })
+      .catch(err => {
+        logger.error(JSON.stringify(err));
+      })
 };
 
 module.exports.facebookLogin = async (req, res) => {
@@ -275,17 +278,18 @@ module.exports.facebookLogin = async (req, res) => {
   let url = `https://graph.facebook.com/v11.0/${userID}/?fields=email&access_token=${accessToken}`;
   let facebookAuth = await axios.get(url);
   const { email } = facebookAuth.data;
-  const [user, created] = await db.user.findOrCreate({
+
+  db.user
+  .findOrCreate({
     where: {
-      email,
+      email: email,
     },
     defaults: {
-      email,
+      email: email,
     },
-  });
-
-  if (user) {
-    let spreadUser = user.get({
+  })
+  .spread((newUser, created) => {
+    let spreadUser = newUser.get({
       plain: true,
     });
     const jwt = JWT.sign(
@@ -297,12 +301,12 @@ module.exports.facebookLogin = async (req, res) => {
         expiresIn: process.env.JWT_EXPIRY,
       }
     );
+
     res
       .status(201)
       .send({ status: "Logged In", accessToken: jwt, user: spreadUser });
-  } else {
-    res
-      .status(400)
-      .send({ status: "Failed" });
-  }
+  })
+    .catch(err => {
+      logger.error(JSON.stringify(err));
+    })
 };

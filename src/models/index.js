@@ -2,6 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const Sequelize = require('sequelize')
 
+require('dotenv').config();
+
 const basename = path.basename(__filename)
 const env = process.env.NODE_ENV || 'development'
 const config = require('../../config/config.js')[env]
@@ -24,7 +26,7 @@ if(env === 'development') {
     )
   }
 } else if (env === 'production') {
-
+  console.log("in production");
   sequelize = new Sequelize('benderaputih', process.env.DB_USER, process.env.DB_PASS, {
     dialect: 'postgres',
     database: 'benderaputih',
