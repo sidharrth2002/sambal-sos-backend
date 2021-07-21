@@ -275,38 +275,43 @@ module.exports.googleLogin = async (req, res) => {
 module.exports.facebookLogin = async (req, res) => {
   const { userID, accessToken } = req.body;
 
+  logger.info(userID);
+  logger.info(accessToken);
+
   let url = `https://graph.facebook.com/v11.0/${userID}/?fields=email&access_token=${accessToken}`;
   let facebookAuth = await axios.get(url);
   const { email } = facebookAuth.data;
 
-  db.user
-  .findOrCreate({
-    where: {
-      email: email,
-    },
-    defaults: {
-      email: email,
-    },
-  })
-  .spread((newUser, created) => {
-    let spreadUser = newUser.get({
-      plain: true,
-    });
-    const jwt = JWT.sign(
-      {
-        data: spreadUser.id,
-      },
-      process.env.JWT_SECRET,
-      {
-        expiresIn: process.env.JWT_EXPIRY,
-      }
-    );
+  logger.info(`Email called with: ${email}`);
 
-    res
-      .status(201)
-      .send({ status: "Logged In", accessToken: jwt, user: spreadUser });
-  })
-    .catch(err => {
-      logger.error(JSON.stringify(err));
+  db.user
+    .findOrCreate({
+      where: {
+        email: email,
+      },
+      defaults: {
+        email: email,
+      },
     })
+    .spread((newUser, created) => {
+      let spreadUser = newUser.get({
+        plain: true,
+      });
+      const jwt = JWT.sign(
+        {
+          data: spreadUser.id,
+        },
+        process.env.JWT_SECRET,
+        {
+          expiresIn: process.env.JWT_EXPIRY,
+        }
+      );
+
+      res
+        .status(201)
+        .send({ status: "Logged In", accessToken: jwt, user: spreadUser });
+    })
+      .catch(err => {
+        logger.error(JSON.stringify(err));
+      })
 };

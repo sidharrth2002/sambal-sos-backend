@@ -1331,3 +1331,13 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-20T19:03:08.542Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-20T19:03:32.159Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-20T19:03:32.160Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-20T19:26:00.445Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-20T19:26:00.514Z"}
+{"message":"1425461247813240","level":"info","timestamp":"2021-07-20T19:29:11.931Z"}
+{"message":"EAANWMg3ZCVU4BAPd5dUKFNVf1Hxmq0bUQUomIDBd87D5EGDL05xs1JkYA81PjeqS5JZA1S7I0a3xZB4h9PKcjhUS4desNhUVsoZB0JAZCe57CZCUSZC4lVRcnE9202cL5ZBfx9ZBQeaMce4LSH0GZAD007i0DpP9MEWDcvr0rD7ZB9I5elXguZAKCRoNIK1QdogcPlD7SXgQRNkZBpjO7n5voExDQ","level":"info","timestamp":"2021-07-20T19:29:11.931Z"}
+{"message":"Email called with: sidharrth.nagappan@gmail.com","level":"info","timestamp":"2021-07-20T19:29:12.184Z"}
+{"message":"103027135408983","level":"info","timestamp":"2021-07-20T19:35:13.994Z"}
+{"message":"EAANWMg3ZCVU4BABWsjo5nGKtEUYIwhsYQE6dZA23E9A5ToLZC4S1zM4ic3tRA4yi20DOb1ZBI6EKVLfQMrpcwEyUpPQNno7poLRpOkTMGkdhzdMNMYbzSYHjPxgjW9VoAd1Rrk6lm01PGIwB4ys6xicZAU4aJtSzVYYLkTZB9mKERWiZCZBdEq2vVQ8QgQrXJ9LzsDDGZABkhaJZAqSMXiZBuZA4","level":"info","timestamp":"2021-07-20T19:35:13.994Z"}
+{"message":"Email called with: vphcralosp_1626809519@tfbnw.net","level":"info","timestamp":"2021-07-20T19:35:14.235Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-20T19:37:55.114Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-20T19:37:55.115Z"}
