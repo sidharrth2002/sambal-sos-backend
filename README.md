@@ -1,7 +1,7 @@
-<h1 align="center"> Sambal Sos Backend </h1>
+<h1 align="center"> Sambal SOS Backend </h1>
 
 <p align="center">
-  <strong>For the Malaysians, By the Malaysians 🇲🇾</strong>
+  <strong>For Malaysians, By Malaysians 🇲🇾</strong>
 </p>
 <p align="center">
   <a href="https://discord.gg/kJUVyfzjeZ">
