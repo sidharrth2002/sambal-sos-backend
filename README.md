@@ -66,12 +66,6 @@ have postgresql installed [here](https://www.postgresql.org/download/)
 \c benderaputih
 ```
 
-4. Create postgis extention for your db
-
-```sql
-CREATE EXTENSION postgis;
-```
-
 ## How to install
 
 1. clone the repo
