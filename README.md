@@ -1,18 +1,73 @@
-# Sambal Sos Backend 
+<h1 align="center"> Sambal Sos Backend </h1>
+
+<p align="center">
+  <strong>For the Malaysians, By the Malaysians 🇲🇾</strong>
+</p>
+<p align="center">
+  <a href="https://discord.gg/kJUVyfzjeZ">
+    <img src="https://img.shields.io/discord/859805317859377173?style=for-the-badge" alt="discord - users online" />
+  </a>
+  <img src="https://img.shields.io/github/languages/code-size/sidharrth2002/sambal-sos-backend?style=for-the-badge"> </img>
+</p>
+
+## README structure
+
+| Link                                    | Description                                         |
+| --------------------------------------- | --------------------------------------------------- |
+| [Project Structure](#project-structure) | Guide to what goes where                            |
+| [Branches](#branches)                   | Explanation of Branches and their uses              |
+| [Contributions](#contributions)         | How to start contributing                           |
+| [Prerequisites](#prerequisites)         | Guide to Installing Dependencies and Setup Postgres |
+| [Installation](#how-to-install)         | How to start running the app                        |
+| [Tech Stack](#tech-stack)               | Frameworks and Packages used                        |
+| [PR Template](#tech-stack)              | Guide to making PRs                                 |
+
+## Project Structure
+
+| Folder  | Description                                                 |
+| ------- | ----------------------------------------------------------- |
+| /config | stores configurations for sequelize (don't touch this)      |
+| /db     | stores sequelize migrations and seeders (provide test data) |
+| /logs   | stores logs of errors and messages                          |
+| /src    | contains the main content -> models, controllers and routes |
+| /utils  | contains extra functions                                    |
+
+## Branches
+
+- production -> Production Branch, Don't touch this without permission from the admins @sidharrth2002
+- main -> Development Branch, make git clones from this branch
+
+## Contributions
+
+The Sambal Sos App is Open Source and we welcome all efforts to improve and help this app grow
+
+you can contribute using the following ways:
+
+1. Creating an Issue on something
+2. Commenting on Issues and Pull Requests
+
+> if you are going to be an active contributor, you can join the discord server and contact the admins using this link [discord server](https://discord.gg/kJUVyfzjeZ)
 
 ## Prerequisites
+
 have postgresql installed [here](https://www.postgresql.org/download/)
 
-1) start a session by doing ```$ psql postgres ``` in your terminal
+1. start a session by doing `$ psql postgres ` in your terminal
 
-2) when you see ``` postgres=# ```, type in
+2. when you see `postgres=#`, type in
+
 ```sql
  CREATE DATABASE benderaputih;
- ```
+```
 
- 3) login to the db ```\c benderaputih```
+3. login to the db
 
-4) Create postgis extention for your db
+```sql
+\c benderaputih
+```
+
+4. Create postgis extention for your db
+
 ```sql
 CREATE EXTENSION postgis;
 ```
@@ -20,12 +75,12 @@ CREATE EXTENSION postgis;
 ## How to install
 
 1. clone the repo
-2. run ```npm install```
-3. create ```.env``` file as given in [env example](.env.example)
-4. enter your database configs in ```.env``` at least for development in local.
-5. run ```npx sequelize db:create``` It will create database for you.
-6. run ```npx sequelize db:migrate``` It will create tables.
-7. run ```npm run dev```
+2. run `npm install`
+3. create `.env` file as given in [env example](.env.example)
+4. enter your database configs in `.env` at least for development in local.
+5. run `npx sequelize db:create` It will create database for you.
+6. run `npx sequelize db:migrate` It will create tables.
+7. run `npm run dev`
 
 ### Tech Stack
 
@@ -38,6 +93,7 @@ CREATE EXTENSION postgis;
 - [x] Swagger for API documentation.
 
 ### How to make pull requests
+
 we would prefer if the pull requests are formatted so it would streamline our workflow
 
 ```
@@ -49,7 +105,7 @@ feat (add something new) or fix (fix an issue) or refactor (no changes to featur
 Describe the changes:
 1.
 2.
-3. 
+3.
 
 Add screenshots:
 
