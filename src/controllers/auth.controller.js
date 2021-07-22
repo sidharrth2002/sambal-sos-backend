@@ -335,6 +335,9 @@ module.exports.googleLogin = async (req, res) => {
 module.exports.facebookLogin = async (req, res) => {
   const { userID, accessToken } = req.body;
 
+  logger.info(userID);
+  logger.info(accessToken);
+
   let url = `https://graph.facebook.com/v11.0/${userID}/?fields=email&access_token=${accessToken}`;
   let facebookAuth = await axios.get(url);
   const { email } = facebookAuth.data;
