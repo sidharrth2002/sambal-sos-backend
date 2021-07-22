@@ -269,6 +269,61 @@ module.exports.googleLogin = async (req, res) => {
     });
 };
 
+/**
+* @swagger
+* paths: 
+*   /api/auth/facebook:
+*     post: 
+*       description: Oauth login using Facebook
+*       tags: 
+*         - Auth
+*       requestBody:
+*         required: 
+*           true 
+*         content: 
+*           application/json:
+*             schema:
+*               type: object
+*               properties:
+*                 userID:
+*                   type: string
+*                   format: uuid
+*                 accessToken:
+*                   type: string
+*       responses:
+*         201:
+*           description: login successful
+*           content:
+*             application/json:
+*               schema:
+*                 type: object
+*                 properties:
+*                   status:
+*                     type: string
+*                     default: "Logged In"
+*                   accessToken:
+*                     type: string
+*                   user:
+*                     type: object
+*                     properties:
+*                       id:
+*                         type: string
+*                         format: uuid
+*                       email:
+*                         type: string
+*                         format: email
+*         400:
+*           description: login failed
+*           content:
+*             application/json:
+*               schema:
+*                 type: object
+*                 properties: 
+*                   status: 
+*                     type: string
+*                     default: "Failed"
+*/
+
 module.exports.facebookLogin = async (req, res) => {
   const { userID, accessToken } = req.body;
 
