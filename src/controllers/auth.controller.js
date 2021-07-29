@@ -260,6 +260,7 @@ module.exports.googleLogin = async (req, res) => {
       const jwt = JWT.sign(
         {
           data: spreadUser.id,
+          role: spreadUser.role || 'USER'
         },
         process.env.JWT_SECRET,
         {

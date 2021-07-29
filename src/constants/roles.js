@@ -1,4 +1,4 @@
-const ROLES_ARRAY = Object.freeze(["SUPERUSER", "ADMIN", "ADMIN"]); // Array of role names, in order of highest to lowest privileges
+const ROLES_ARRAY = Object.freeze(["SUPERUSER", "ADMIN", "USER"]); // Array of role names, in order of highest to lowest privileges
 const DEFAULT_ROLE = ROLES_ARRAY[ROLES_ARRAY.length - 1]; // Default role
 const rolesObject = {}; // Internally stored roles object
 
