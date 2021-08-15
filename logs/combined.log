@@ -1295,3 +1295,28 @@
 {"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:28:10.863Z"}
 {"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:31:21.986Z"}
 {"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:31:22.037Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:36.748Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:38.101Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:44.909Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:49.064Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:53.713Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:54.486Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:54.994Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:04.818Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:05.355Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:32:24.314Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:32:24.358Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-08-15T21:32:32.957Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-08-15T21:32:32.958Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:32:34.243Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:32:34.296Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:37.046Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:33:07.886Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:33:07.934Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:33:56.835Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:33:56.885Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:34:44.382Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:34:44.438Z"}
+{"message":"DB Error: Cannot read property 'length' of null","level":"error","timestamp":"2021-08-15T21:35:00.440Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:35:10.907Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:35:10.956Z"}

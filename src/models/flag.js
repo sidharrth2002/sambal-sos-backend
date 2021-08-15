@@ -66,7 +66,7 @@ module.exports = (sequelize, DataTypes) => {
       { status },
       { where: { id }, validate: true, returning: true }
       ).then((flag) => {
-        if (flag[0] === 0) {
+        if (flag[1].length === 0) {
           // not found
           return callback(new FlagNotFoundError(`Flag with ${id} does not exist`));
         }
