@@ -3,6 +3,8 @@ const uuid = require("uuid/v4"); // ES5
 
 // const bcrypt = require('bcrypt')
 const logger = require("../../winston-config");
+const FlagNotFoundError = require('../constants/errors/FlagNotFoundError')
+const InvalidInputError = require('../constants/errors/InvalidInputError')
 
 // Flag
 module.exports = (sequelize, DataTypes) => {
@@ -62,11 +64,22 @@ module.exports = (sequelize, DataTypes) => {
   Flag.updateApprovalStatus = function (id, status, callback) {
     this.update(
       { status },
-      { where: { id }, validate: true}
-      ).then(() => callback(null))
+      { where: { id }, validate: true, returning: true }
+      ).then((flag) => {
+        if (flag[0] === 0) {
+          // not found
+          return callback(new FlagNotFoundError(`Flag with ${id} does not exist`));
+        }
+
+        return callback(null)
+    })
       .catch((err) => {
         logger.error(`DB Error: ${err.message}`);
-        return callback(err);
+        if (err.message.includes('invalid input value for enum enum_flags_status')) {
+          return callback(new InvalidInputError("status must be one of: APPROVED, PENDING, UNDER REVIEW, REJECTED"))
+        } else {
+          return callback(err);
+        }
       });
   }
 

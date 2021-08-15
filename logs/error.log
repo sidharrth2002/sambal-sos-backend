@@ -139,3 +139,10 @@
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T19:36:50.148Z"}
 {"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:37:02.226Z"}
 {"message":"Flag not found: undefined","level":"error","timestamp":"2021-08-15T19:38:02.840Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"BERB\"","level":"error","timestamp":"2021-08-15T21:14:13.102Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"BERB\"","level":"error","timestamp":"2021-08-15T21:17:16.006Z"}
+{"message":"DB Error: invalid input syntax for type uuid: \"6cbe8965-3b1a-4b9e-83a0-9ce962cf5fc\"","level":"error","timestamp":"2021-08-15T21:17:32.889Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:24:50.058Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:24:58.214Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:27:57.587Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:28:10.863Z"}

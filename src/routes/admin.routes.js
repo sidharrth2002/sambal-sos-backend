@@ -4,7 +4,7 @@ const router = express.Router();
 const { ValidateJWT } = require("../../utils/utils");
 
 router.post(
-  "/updateflag",
+  "/updateflagapproval",
   ValidateJWT("ADMIN"),
   updateFlagApprovalStatus
 );
