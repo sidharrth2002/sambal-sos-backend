@@ -4,8 +4,11 @@ const logger = require("../winston-config");
 
 // TODO: add roles to API
 module.exports.ValidateJWT = (role) => (req, res, next) => {
+  const { headers } = req || {};
+  const { authorization } = headers || "";
+
   const token =
-    req.headers["x-access-token"] || req.headers.authorization.split(" ")[1];
+    headers["x-access-token"] || authorization.split(" ")[1];
 
   if (!token) {
     res.status(400).send({ status: false, message: "Token required" });

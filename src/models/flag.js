@@ -59,6 +59,17 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
 
+  Flag.updateApprovalStatus = function (id, status, callback) {
+    this.update(
+      { status },
+      { where: { id }, validate: true}
+      ).then(() => callback(null))
+      .catch((err) => {
+        logger.error(`DB Error: ${err.message}`);
+        return callback(err);
+      });
+  }
+
   Flag.findOneFlag = function (id, cb) {
     this.findOne({ where: { id } })
       .then((flag) => {

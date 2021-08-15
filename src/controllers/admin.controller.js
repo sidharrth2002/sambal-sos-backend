@@ -3,37 +3,132 @@ const { body } = require("express-validator");
 const logger = require("../../winston-config");
 const db = require("../models");
 
+/**
+ * @swagger
+ *
+ *  paths:
+ *    /api/admin/deleteflags:
+ *      get:
+ *        description: Get All flags in DB (no filter)
+ *        tags:
+ *          - Flag
+ *        query:
+ *          required: false
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  offset:
+ *                    type: integer
+ *                  limit:
+ *                    type: integer
+ *        responses:
+ *          200:
+ *            description: sucessfully gotten all flags
+ *            content:
+ *              application/json:
+ *                schema:
+ *                  type: array
+ *                  items:
+ *                    type: object
+ *                    properties:
+ *                      id:
+ *                        type: string
+ *                        format: uuid
+ *                      coordinates:
+ *                        type: object
+ *                        properties:
+ *                          coordinates:
+ *                            type: array
+ *                            items:
+ *                              type: integer
+ *                            example: [0, 0]
+ *
+ *                      address:
+ *                        type: string
+ *                      description:
+ *                        type: string
+ *                      image:
+ *                        type: string
+ *                      status:
+ *                        type: string
+ *                        enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
+ *            500:
+ *              description: Error
+ *
+ */
+module.exports.adminGetAllFlags = (req, res) => {
+  const { offset, limit } = req.query;
+
+  db.flag
+    .findAll({
+      limit: !limit ? null : limit,
+      offset: !offset ? null : offset
+    })
+    .then((flags) => {
+      res.status(200).json(flags);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+};
+
+/**
+ * @swagger
+ *
+ *  paths:
+ *    /api/admin/deleteflag:
+ *      delete:
+ *        description: Deletes flag
+ *        tags:
+ *          - Flag
+ *        query:
+ *          required: false
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  id:
+ *                    type: string
+ *        responses:
+ *          200:
+ *            description: sucessfully deleted flag
+ *
+ *          500:
+ *            description: Error
+ *
+ */
+module.exports.deleteFlag = (req, res) => {
+  const { id } = req.body;
+
+  db.flag
+    .destroy({
+      where: {
+        id,
+      },
+    })
+    .then((stat) => res.sendStatus(200))
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+};
+
 module.exports.updateFlagApprovalStatus = (req, res) => {
-  db.flag.findOneFlag(req.body.flagId, (err, flag) => {
+  const { id, status } = req.body;
+  db.flag.updateApprovalStatus(id, status, (err) => {
     if (err) {
-      logger.error(`DB Error: ${err.message}`);
       res.status(500).json({
         status: false,
-        message: "some error occured",
+        message: "some error occurred",
         error: err,
       });
-    }
-    if (data) {
-      db.user
-        .update(req.body)
-        .then((updateFlag) => {
-          res.status(201).json({ status: true, updateFlag });
-        })
-        .catch((er) => {
-          logger.error(`DB Error: ${er.message}`);
-          return res.status(500).json({
-            status: false,
-            message: "Error update flags",
-            error: er,
-          });
-        });
     } else {
-      logger.error(`DB Error: ${er.message}`);
-      return res.status(500).json({
-        status: false,
-        message: "Error update flags",
-        error: er,
+      res.status(200).json({
+        status: true,
+        message: "Updated"
       });
     }
-  });
+  })
 };

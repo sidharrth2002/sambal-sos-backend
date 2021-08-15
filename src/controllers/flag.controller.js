@@ -34,30 +34,30 @@ const moment = require("moment");
  *                  items:
  *                    type: object
  *                    properties:
- *                      id: 
+ *                      id:
  *                        type: string
  *                        format: uuid
- *                      coordinates: 
+ *                      coordinates:
  *                        type: object
  *                        properties:
- *                          coordinates: 
+ *                          coordinates:
  *                            type: array
- *                            items: 
+ *                            items:
  *                              type: integer
  *                            example: [0, 0]
- *                          
- *                      address: 
+ *
+ *                      address:
  *                        type: string
- *                      description:     
+ *                      description:
  *                        type: string
- *                      image: 
+ *                      image:
  *                        type: string
- *                      status: 
+ *                      status:
  *                        type: string
  *                        enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
  *            500:
  *              description: Error
- *          
+ *
  */
 module.exports.getAllFlags = (req, res) => {
   const { offset, limit } = req.body;
@@ -98,9 +98,9 @@ module.exports.getAllFlags = (req, res) => {
  *              schema:
  *                type: object
  *                properties:
- *                  radius: 
+ *                  radius:
  *                    type: integer
- *                  longitude: 
+ *                  longitude:
  *                    type: number
  *                  latitude:
  *                     type: number
@@ -114,30 +114,30 @@ module.exports.getAllFlags = (req, res) => {
  *                  items:
  *                    type: object
  *                    properties:
- *                      id: 
+ *                      id:
  *                        type: string
  *                        format: uuid
- *                      coordinates: 
+ *                      coordinates:
  *                        type: object
  *                        properties:
- *                          coordinates: 
+ *                          coordinates:
  *                            type: array
- *                            items: 
+ *                            items:
  *                              type: integer
  *                            example: [0, 0]
- *                          
- *                      address: 
+ *
+ *                      address:
  *                        type: string
- *                      description:     
+ *                      description:
  *                        type: string
- *                      image: 
+ *                      image:
  *                        type: string
- *                      status: 
+ *                      status:
  *                        type: string
  *                        enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
  *            500:
  *              description: Error
- *          
+ *
  */
 // TODO: debug this
 module.exports.getAllFlagsInRadius = async (req, res) => {
@@ -184,11 +184,11 @@ module.exports.getAllFlagsInRadius = async (req, res) => {
  *              schema:
  *                type: object
  *                properties:
- *                  longitude: 
+ *                  longitude:
  *                    type: number
  *                  latitude:
  *                     type: number
- *                  description: 
+ *                  description:
  *                     type: string
  *                  image:
  *                     type: string
@@ -200,30 +200,30 @@ module.exports.getAllFlagsInRadius = async (req, res) => {
  *                schema:
  *                   type: object
  *                   properties:
- *                     id: 
+ *                     id:
  *                       type: string
  *                       format: uuid
- *                     coordinates: 
+ *                     coordinates:
  *                       type: object
  *                       properties:
- *                         coordinates: 
+ *                         coordinates:
  *                           type: array
- *                           items: 
+ *                           items:
  *                             type: integer
  *                           example: [0, 0]
- *                          
- *                     address: 
+ *
+ *                     address:
  *                       type: string
- *                     description:     
+ *                     description:
  *                       type: string
- *                     image: 
+ *                     image:
  *                       type: string
- *                     status: 
+ *                     status:
  *                       type: string
  *                       enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
  *            500:
  *              description: Error
- *          
+ *
  */
 module.exports.createFlag = (req, res) => {
   // for now, send from frontend
@@ -246,23 +246,6 @@ module.exports.createFlag = (req, res) => {
       status: "PENDING",
     })
     .then((newFlag) => res.status(200).send(newFlag))
-    .catch((err) => {
-      res.status(500).send(err);
-    });
-};
-
-// delete a flag
-// only admins can delete
-module.exports.deleteFlag = (req, res) => {
-  const { id } = req.body;
-
-  db.flag
-    .destroy({
-      where: {
-        id,
-      },
-    })
-    .then((stat) => res.sendStatus(200))
     .catch((err) => {
       res.status(500).send(err);
     });
@@ -298,30 +281,30 @@ module.exports.deleteFlag = (req, res) => {
  *                  items:
  *                    type: object
  *                    properties:
- *                      id: 
+ *                      id:
  *                        type: string
  *                        format: uuid
- *                      coordinates: 
+ *                      coordinates:
  *                        type: object
  *                        properties:
- *                          coordinates: 
+ *                          coordinates:
  *                            type: array
- *                            items: 
+ *                            items:
  *                              type: integer
  *                            example: [0, 0]
- *                          
- *                      address: 
+ *
+ *                      address:
  *                        type: string
- *                      description:     
+ *                      description:
  *                        type: string
- *                      image: 
+ *                      image:
  *                        type: string
- *                      status: 
+ *                      status:
  *                        type: string
  *                        enum: ['PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED']
  *            500:
  *              description: Error
- *          
+ *
  */
 module.exports.getApprovedFlags = (req, res) => {
   const { offset, limit } = req.body;

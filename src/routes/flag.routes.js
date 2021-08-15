@@ -17,7 +17,4 @@ router.get("/getallinradius", ValidateJWT(), getAllFlagsInRadius);
 
 router.post("/createflag", ValidateJWT(), createFlag);
 
-// admin permissions yet to set up
-// router.post('/deleteflag', deleteFlag)
-
 module.exports = router;
