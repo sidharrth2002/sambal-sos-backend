@@ -6,9 +6,9 @@ require('dotenv').config();
 
 const basename = path.basename(__filename)
 const env = process.env.NODE_ENV || 'development'
-const config = require('../../config/config.js')[env]
-
 console.log('We are in ' + env);
+
+const config = require('../../config/config.js')
 
 const db = {}
 

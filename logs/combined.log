@@ -1341,3 +1341,73 @@
 {"message":"Email called with: vphcralosp_1626809519@tfbnw.net","level":"info","timestamp":"2021-07-20T19:35:14.235Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-20T19:37:55.114Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-20T19:37:55.115Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-26T15:28:11.793Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-26T15:28:11.814Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-26T15:28:19.758Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-26T15:28:19.759Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-26T15:28:30.031Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-26T15:28:30.185Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-26T15:55:31.414Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-26T15:55:31.415Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-27T02:52:48.358Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-27T02:52:48.378Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-27T02:53:01.928Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-27T02:53:01.929Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-27T02:53:04.668Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-27T02:53:04.792Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-27T02:59:44.765Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-27T02:59:44.765Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-07-28T09:02:20.464Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-07-28T09:02:20.546Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-07-28T09:03:51.370Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-07-28T09:03:51.371Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-10T16:35:32.200Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-10T16:35:32.314Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-08-10T16:41:15.399Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-08-10T16:41:15.399Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-14T09:01:42.687Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-08-14T09:01:42.722Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-08-14T09:02:02.492Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-08-14T09:02:02.493Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-14T09:02:05.488Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-14T09:02:05.617Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-08-14T09:03:28.441Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-08-14T09:03:28.442Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-19T16:11:18.802Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-19T16:11:18.944Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-08-20T02:04:13.768Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-08-20T02:04:13.816Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-09-05T04:19:19.258Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-09-05T04:19:19.383Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-09-05T04:19:43.518Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-09-05T04:19:43.582Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-05T04:38:05.789Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-05T04:38:05.795Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-09-08T02:10:40.454Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-09-08T02:10:40.566Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-08T03:36:58.065Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-08T03:36:58.072Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-08T03:36:58.185Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-08T03:36:58.187Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-08T03:36:58.246Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-08T03:36:58.246Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-09-08T16:40:06.756Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-09-08T16:40:06.843Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-09-13T05:54:03.310Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-09-13T05:54:03.331Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-13T05:54:16.379Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-13T05:54:16.380Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-09-13T05:54:19.507Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-09-13T05:54:19.635Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-13T07:06:29.678Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-13T07:06:29.679Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-13T07:06:29.742Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-13T07:06:29.743Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-13T07:06:29.792Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-13T07:06:29.793Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-13T07:06:31.380Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-13T07:06:31.381Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-09-28T16:53:33.645Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-09-28T16:53:33.756Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-28T17:00:10.518Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-28T17:00:10.519Z"}

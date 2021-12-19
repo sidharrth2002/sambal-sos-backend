@@ -23,7 +23,6 @@ let processFile = Multer({
 
 router.post(
   "/minioupload",
-  ValidateJWT,
   util.promisify(processFile),
   minioUpload
 );

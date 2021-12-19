@@ -51,6 +51,14 @@
                     "field": "status",
                     "seqType": "Sequelize.ENUM('PENDING', 'APPROVED', 'UNDER REVIEW', 'REJECTED')"
                 },
+                "type": {
+                    "allowNull": true,
+                    "defaultValue": {
+                        "value": "GENERAL"
+                    },
+                    "field": "type",
+                    "seqType": "Sequelize.TEXT"
+                },
                 "createdAt": {
                     "allowNull": false,
                     "field": "createdAt",
@@ -108,5 +116,5 @@
             "indexes": []
         }
     },
-    "revision": 6
+    "revision": 7
 }

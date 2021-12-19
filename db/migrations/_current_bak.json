@@ -23,6 +23,11 @@
                     "field": "address",
                     "seqType": "Sequelize.TEXT"
                 },
+                "phonenumber": {
+                    "allowNull": true,
+                    "field": "phonenumber",
+                    "seqType": "Sequelize.TEXT"
+                },
                 "description": {
                     "allowNull": true,
                     "field": "description",
@@ -103,5 +108,5 @@
             "indexes": []
         }
     },
-    "revision": 5
+    "revision": 6
 }

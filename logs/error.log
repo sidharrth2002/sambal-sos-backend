@@ -118,3 +118,7 @@
 {"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-07-10T03:11:49.726Z"}
 {"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-19T14:21:06.456Z"}
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-20T18:35:18.609Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-26T15:28:11.814Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-27T02:52:48.378Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-08-14T09:01:42.722Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-09-13T05:54:03.330Z"}
