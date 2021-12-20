@@ -27,9 +27,9 @@ if(env === 'development') {
   }
 } else if (env === 'production') {
   console.log("in production");
-  sequelize = new Sequelize('benderaputih', process.env.DB_USER, process.env.DB_PASS, {
+  sequelize = new Sequelize('sambalsos', process.env.DB_USER, process.env.DB_PASS, {
     dialect: 'postgres',
-    database: 'benderaputih',
+    database: 'sambalsos',
     host: process.env.DB_HOST,
     dialectOptions: {
       host: process.env.DB_HOST

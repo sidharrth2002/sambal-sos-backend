@@ -1411,3 +1411,37 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-09-28T16:53:33.756Z"}
 {"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-09-28T17:00:10.518Z"}
 {"message":"💥 Process terminated!","level":"info","timestamp":"2021-09-28T17:00:10.519Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-12-20T12:17:18.361Z"}
+{"message":"Unable to connect to the database:' no pg_hba.conf entry for host \"14.192.220.110\", user \"sambalsosuser\", database \"benderaputih\", SSL off","level":"error","timestamp":"2021-12-20T12:17:18.417Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:17:35.862Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:17:35.864Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:17:35.864Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:17:35.865Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-12-20T12:17:43.822Z"}
+{"message":"Unable to connect to the database:' no pg_hba.conf entry for host \"14.192.220.110\", user \"sambalsosuser\", database \"benderaputih\", SSL off","level":"error","timestamp":"2021-12-20T12:17:43.876Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:19:02.860Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:19:02.861Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:19:02.862Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:19:02.863Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-12-20T12:19:05.646Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-12-20T12:19:05.937Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:20:17.859Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:20:17.860Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:20:17.861Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:20:17.862Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:18.874Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:18.875Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:18.875Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:18.875Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:19.505Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:19.506Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:19.506Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:19.506Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:30.753Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:30.753Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:30.754Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:30.754Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:31.112Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:31.112Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-12-20T12:21:31.112Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-12-20T12:21:31.113Z"}
