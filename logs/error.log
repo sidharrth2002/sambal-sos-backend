@@ -118,6 +118,45 @@
 {"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-07-10T03:11:49.726Z"}
 {"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-19T14:21:06.456Z"}
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-07-20T18:35:18.609Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T19:17:52.364Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T19:18:08.230Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:18:12.140Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:18:13.058Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:18:13.464Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:18:13.830Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:18:14.982Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:18:45.932Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:19:19.450Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:19:26.164Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:20:14.179Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:20:16.836Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:20:17.424Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:20:18.266Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:20:32.013Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:20:33.383Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:20:35.843Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T19:30:15.894Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T19:36:50.148Z"}
+{"message":"Error occured: TypeError: Cannot read property 'split' of undefined","level":"error","timestamp":"2021-08-15T19:37:02.226Z"}
+{"message":"Flag not found: undefined","level":"error","timestamp":"2021-08-15T19:38:02.840Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"BERB\"","level":"error","timestamp":"2021-08-15T21:14:13.102Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"BERB\"","level":"error","timestamp":"2021-08-15T21:17:16.006Z"}
+{"message":"DB Error: invalid input syntax for type uuid: \"6cbe8965-3b1a-4b9e-83a0-9ce962cf5fc\"","level":"error","timestamp":"2021-08-15T21:17:32.889Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:24:50.058Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:24:58.214Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:27:57.587Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:28:10.863Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:36.747Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:38.101Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:44.909Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:49.063Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:53.713Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:54.486Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:54.994Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:04.818Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:05.355Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:37.046Z"}
+{"message":"DB Error: Cannot read property 'length' of null","level":"error","timestamp":"2021-08-15T21:35:00.440Z"}
 {"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-26T15:28:11.814Z"}
 {"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-27T02:52:48.378Z"}
 {"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-08-14T09:01:42.722Z"}

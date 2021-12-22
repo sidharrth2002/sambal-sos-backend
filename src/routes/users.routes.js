@@ -9,6 +9,6 @@ const {
 
 router.post("/createtest", createTestUser);
 
-router.get("/users", ValidateJWT, getAllUsers);
+router.get("/users", ValidateJWT(), getAllUsers);
 
 module.exports = router;

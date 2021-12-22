@@ -165,9 +165,13 @@ module.exports.login = (req, res) => {
 
       // if (match) {
       const expiry = "15m"; // JWT expiry duration
-      const token = JWT.sign({ data: user.id }, process.env.JWT_SECRET, {
-        expiresIn: expiry,
-      });
+      const token = JWT.sign(
+        { data: user.id, role: user.role },
+        process.env.JWT_SECRET,
+        {
+          expiresIn: expiry,
+        }
+      );
       res.status(200).json({
         status: true,
         message: "User successfully logged in",
@@ -256,6 +260,7 @@ module.exports.googleLogin = async (req, res) => {
       const jwt = JWT.sign(
         {
           data: spreadUser.id,
+          role: spreadUser.role || 'USER'
         },
         process.env.JWT_SECRET,
         {
@@ -274,16 +279,16 @@ module.exports.googleLogin = async (req, res) => {
 
 /**
 * @swagger
-* paths: 
+* paths:
 *   /api/auth/facebook:
-*     post: 
+*     post:
 *       description: Oauth login using Facebook
-*       tags: 
+*       tags:
 *         - Auth
 *       requestBody:
-*         required: 
-*           true 
-*         content: 
+*         required:
+*           true
+*         content:
 *           application/json:
 *             schema:
 *               type: object
@@ -321,8 +326,8 @@ module.exports.googleLogin = async (req, res) => {
 *             application/json:
 *               schema:
 *                 type: object
-*                 properties: 
-*                   status: 
+*                 properties:
+*                   status:
 *                     type: string
 *                     default: "Failed"
 */
@@ -355,6 +360,7 @@ module.exports.facebookLogin = async (req, res) => {
       const jwt = JWT.sign(
         {
           data: spreadUser.id,
+          role: spreadUser.role || 'USER'
         },
         process.env.JWT_SECRET,
         {

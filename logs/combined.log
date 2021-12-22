@@ -1248,6 +1248,78 @@
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-18T03:02:42.090Z"}
 {"message":"server started on port 8080","level":"info","timestamp":"2021-07-18T03:02:48.268Z"}
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-18T03:02:48.326Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:14:09.721Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:14:09.772Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"BERB\"","level":"error","timestamp":"2021-08-15T21:14:13.102Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:16:45.018Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:16:45.070Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:17:11.613Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:17:11.670Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"BERB\"","level":"error","timestamp":"2021-08-15T21:17:16.006Z"}
+{"message":"DB Error: invalid input syntax for type uuid: \"6cbe8965-3b1a-4b9e-83a0-9ce962cf5fc\"","level":"error","timestamp":"2021-08-15T21:17:32.889Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:18:30.148Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:18:30.203Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:18:50.573Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:18:50.628Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:19:15.391Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:19:15.437Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:19:16.277Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:19:16.326Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:19:40.821Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:19:40.871Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:21:20.200Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:21:20.248Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:21:57.260Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:21:57.306Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:23:48.232Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:23:48.280Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:24:02.567Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:24:02.614Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:24:10.081Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:24:10.134Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:24:45.390Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:24:45.438Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:24:50.058Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:24:58.214Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:25:48.449Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:25:48.495Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:26:35.923Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:26:35.968Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:26:59.547Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:26:59.596Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:27:40.364Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:27:40.415Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:27:57.587Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:28:09.138Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:28:09.184Z"}
+{"message":"DB Error: invalid input value for enum enum_flags_status: \"APPROVD\"","level":"error","timestamp":"2021-08-15T21:28:10.863Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:31:21.986Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:31:22.037Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:36.748Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:38.101Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:44.909Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:49.064Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:53.713Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:54.486Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:31:54.994Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:04.818Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:05.355Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:32:24.314Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:32:24.358Z"}
+{"message":"SIGINT RECEIVED. Shutting down gracefully","level":"warn","timestamp":"2021-08-15T21:32:32.957Z"}
+{"message":"💥 Process terminated!","level":"info","timestamp":"2021-08-15T21:32:32.958Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:32:34.243Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:32:34.296Z"}
+{"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:37.046Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:33:07.886Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:33:07.934Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:33:56.835Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:33:56.885Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:34:44.382Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:34:44.438Z"}
+{"message":"DB Error: Cannot read property 'length' of null","level":"error","timestamp":"2021-08-15T21:35:00.440Z"}
+{"message":"server started on port 8080","level":"info","timestamp":"2021-08-15T21:35:10.907Z"}
+{"message":"We are connected to the database","level":"info","timestamp":"2021-08-15T21:35:10.956Z"}
 {"message":"server started on port 8080","level":"info","timestamp":"2021-07-18T03:39:57.651Z"}
 {"message":"We are connected to the database","level":"info","timestamp":"2021-07-18T03:39:57.718Z"}
 {"message":"server started on port 8080","level":"info","timestamp":"2021-07-19T14:21:06.436Z"}
