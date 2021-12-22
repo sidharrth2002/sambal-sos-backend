@@ -6,27 +6,30 @@ require('dotenv').config();
 
 const basename = path.basename(__filename)
 const env = process.env.NODE_ENV || 'development'
-console.log('We are in ' + env);
 
-const config = require('../../config/config.js')
+const config = require('../../config/config.js');
+const logger = require('../../winston-config.js');
+
+logger.info(`We are in ${env}`);
 
 const db = {}
 
 let sequelize;
 
 if(env === 'development') {
+  logger.info('CONNECTING TO DEVELOPMENT DATABASE');
   if (config.use_env_variable) {
     sequelize = new Sequelize(process.env[config.use_env_variable], config)
   } else {
     sequelize = new Sequelize(
-      config.database,
-      config.username,
-      config.password,
-      config
+      config[process.env.NODE_ENV].database,
+      config[process.env.NODE_ENV].username,
+      config[process.env.NODE_ENV].password,
+      config[process.env.NODE_ENV]
     )
   }
 } else if (env === 'production') {
-  console.log("in production");
+  logger.info('CONNECTING TO PRODUCTION DATABASE');
   sequelize = new Sequelize('sambalsos', process.env.DB_USER, process.env.DB_PASS, {
     dialect: 'postgres',
     database: 'sambalsos',
