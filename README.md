@@ -66,6 +66,13 @@ have postgresql installed [here](https://www.postgresql.org/download/)
 \c benderaputih
 ```
 
+4. Create postgis extension
+* make sure that [postgis](https://postgis.net/install/) is installed on your computer
+while being connected to the db, paste in this line of code and run it
+```sql
+CREATE EXTENSION postgis;
+```
+
 ## How to install
 
 1. clone the repo
