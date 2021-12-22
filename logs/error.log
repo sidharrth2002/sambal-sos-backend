@@ -157,3 +157,10 @@
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:05.355Z"}
 {"message":"Error occured: Error: Not found","level":"error","timestamp":"2021-08-15T21:32:37.046Z"}
 {"message":"DB Error: Cannot read property 'length' of null","level":"error","timestamp":"2021-08-15T21:35:00.440Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-26T15:28:11.814Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-07-27T02:52:48.378Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-08-14T09:01:42.722Z"}
+{"message":"Unable to connect to the database:' connect ECONNREFUSED 127.0.0.1:5432","level":"error","timestamp":"2021-09-13T05:54:03.330Z"}
+{"message":"Unable to connect to the database:' no pg_hba.conf entry for host \"14.192.220.110\", user \"sambalsosuser\", database \"benderaputih\", SSL off","level":"error","timestamp":"2021-12-20T12:17:18.416Z"}
+{"message":"Unable to connect to the database:' no pg_hba.conf entry for host \"14.192.220.110\", user \"sambalsosuser\", database \"benderaputih\", SSL off","level":"error","timestamp":"2021-12-20T12:17:43.876Z"}
+{"message":"Unable to connect to the database:' role \"SidharrthNagappansdfsd\" does not exist","level":"error","timestamp":"2021-12-22T04:09:01.901Z"}

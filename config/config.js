@@ -8,7 +8,11 @@ module.exports = {
     host: process.env.DB_DEV_HOST,
     port: process.env.DB_DEV_PORT,
     dialect: 'postgres',
-    operatorsAliases: false
+    dialectOptions: {
+      socketPath: process.env.DB_DEV_HOST
+    },
+    operatorsAliases: false,
+    use_env_variable: true
   },
   test: {
     username: process.env.DB_TEST_USER,
@@ -36,6 +40,6 @@ module.exports = {
     },
     logging: false,
     operatorsAliases: false,
-    use_env_variable: true
+    // use_env_variable: true
   },
 }

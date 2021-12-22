@@ -244,6 +244,7 @@ module.exports.createFlag = (req, res) => {
       minioimage: image,
       phonenumber: phonenumber !== "" ? phonenumber : null,
       status: "PENDING",
+      type: req.body.type !== undefined ? req.body.type : "GENERAL",
     })
     .then((newFlag) => res.status(200).send(newFlag))
     .catch((err) => {

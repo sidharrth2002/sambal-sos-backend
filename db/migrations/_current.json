@@ -67,6 +67,13 @@
                     "onDelete": "SET NULL",
                     "onUpdate": "CASCADE",
                     "seqType": "Sequelize.UUID"
+                "type": {
+                    "allowNull": true,
+                    "defaultValue": {
+                        "value": "GENERAL"
+                    },
+                    "field": "type",
+                    "seqType": "Sequelize.TEXT"
                 },
                 "createdAt": {
                     "allowNull": false,

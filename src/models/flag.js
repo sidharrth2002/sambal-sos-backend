@@ -52,7 +52,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       allowNull: true,
     },
-  });
+    type: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      defaultValue: 'GENERAL'
+    }
+  })
 
   Flag.associate = (models) => {
     Flag.belongsTo(models.user);
